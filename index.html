@@ -2,146 +2,175 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO Tags -->
-  <meta name="description" content="Sandesh Patil - Frontend Developer portfolio showcasing skills, projects, and contact information." />
-  <meta name="keywords" content="Sandesh Patil, Web Developer, Frontend Developer, Portfolio, HTML, CSS, JavaScript" />
-  <meta name="author" content="Sandesh Patil" />
-  <meta name="robots" content="index, follow" />
-  <meta name="referrer" content="no-referrer" />
+  <meta name="description" content="Sandesh Patil - Frontend Developer portfolio showcasing skills, projects, and contact information.">
+  <meta name="keywords" content="Frontend Developer, Sandesh Patil, Portfolio, Web Development, HTML CSS JS">
+  <meta name="author" content="Sandesh Patil">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self';">
+  <meta http-equiv="X-Frame-Options" content="DENY">
 
-  <!-- Security Headers via Meta (Optional Fallbacks) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self';" />
-  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta http-equiv="X-Frame-Options" content="DENY" />
-  <meta http-equiv="Referrer-Policy" content="no-referrer" />
+  <title>Sandesh Patil | Web Developer Portfolio</title>
 
-  <title>Sandesh Patil | Frontend Developer</title>
+  <!-- Favicon and Google Font -->
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Fonts & Favicon -->
-  <link rel="icon" href="favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- CSS Styles -->
   <style>
+    :root {
+      --primary-color: #1a73e8;
+      --primary-light: #e8f0fe;
+      --text-color: #202124;
+      --bg-color: #ffffff;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Roboto', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
-      background: #ffffff;
-      color: #333;
     }
 
     header {
-      background: #0d47a1;
-      color: white;
+      background-color: var(--primary-color);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
     .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
+      font-size: 1.6rem;
+      font-weight: 700;
     }
 
     nav ul {
-      list-style: none;
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
+      list-style: none;
     }
 
     nav a {
       color: white;
       text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .hero {
       text-align: center;
-      padding: 4rem 2rem;
-      background: #e3f2fd;
+      padding: 4rem 1rem;
+      background: var(--primary-light);
     }
 
     .hero h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .hero p {
       font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background: #1976d2;
+      background: var(--primary-color);
       color: white;
-      text-decoration: none;
-      border-radius: 5px;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #1558d6;
     }
 
     section {
-      padding: 2rem;
-      max-width: 900px;
+      padding: 3rem 1.5rem;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
     h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #0d47a1;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
     }
 
-    ul li {
-      margin-bottom: 1rem;
+    .projects {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1.5rem;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     form {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      max-width: 500px;
+      max-width: 600px;
+      margin-top: 1rem;
     }
 
     input, textarea {
-      padding: 0.6rem;
+      padding: 0.8rem;
       font-size: 1rem;
-      border: 1px solid #ccc;
       border-radius: 4px;
+      border: 1px solid #ccc;
       resize: vertical;
     }
 
-    button {
-      background: #1976d2;
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
     footer {
-      background: #0d47a1;
+      background: var(--primary-color);
       color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    a.external-link {
+      color: #bbdefb;
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
       nav ul {
         flex-direction: column;
-        align-items: flex-start;
+        gap: 0.5rem;
       }
 
       .hero h1 {
@@ -151,7 +180,7 @@
   </style>
 </head>
 <body>
-  <!-- Header / Navbar -->
+
   <header>
     <div class="logo">Sandesh Patil</div>
     <nav>
@@ -164,60 +193,55 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero" id="home">
     <h1>Hello, I'm Sandesh Patil</h1>
-    <p>Frontend Web Developer | Passionate about UI/UX & Web Performance</p>
-    <a href="#projects" class="btn">View My Work</a>
+    <p>Frontend Developer | HTML, CSS, JavaScript Enthusiast</p>
+    <a href="#projects"><button class="btn">See Projects</button></a>
   </section>
 
-  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm a self-motivated Frontend Developer with hands-on experience building SEO-friendly and responsive websites using core technologies like HTML5, CSS3, and JavaScript.</p>
-    <p>I love crafting lightweight websites that are both user-friendly and performance-optimized, following Google's design principles and accessibility best practices.</p>
+    <p>
+      I'm a self-driven Frontend Developer from Pune, India. I specialize in building lightweight, responsive websites with a focus on performance, SEO, and clean design—following Google’s Material Design principles. My tech stack includes HTML5, CSS3, JavaScript, and a growing interest in React.
+    </p>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects">
-    <h2>My Projects</h2>
-    <ul>
-      <li>
-        <strong>📚 Personal Bookshelf App</strong><br>
-        A React.js app using Open Library API & LocalStorage to manage a personal reading list.
-      </li>
-      <li>
-        <strong>💳 Business Card Generator</strong><br>
-        A customizable business card builder with ordering functionality using React and Node.js.
-      </li>
-      <li>
-        <strong>💼 UsabilityHub Clone</strong><br>
-        A simple landing page UI built with HTML & CSS to showcase usability testing tools.
-      </li>
-    </ul>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>📚 Personal Bookshelf</h3>
+        <p>A React app using Open Library API & localStorage to manage personal reading lists.</p>
+      </div>
+      <div class="card">
+        <h3>💳 Business Card Generator</h3>
+        <p>Web app with React and Node.js that allows users to customize and order business cards.</p>
+      </div>
+      <div class="card">
+        <h3>📊 UsabilityHub Clone</h3>
+        <p>Frontend-only clone using HTML and CSS to simulate usability testing platform design.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
+    <p>If you'd like to collaborate or just say hi, feel free to send me a message!</p>
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit" class="btn">Send</button>
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Sandesh Patil. All Rights Reserved.</p>
-    <p><a href="https://www.linkedin.com/in/sandeshpatil10/" style="color: #90caf9;">Connect on LinkedIn</a></p>
+    <p>&copy; 2025 Sandesh Patil</p>
+    <p><a class="external-link" href="https://www.linkedin.com/in/sandeshpatil10/" target="_blank">Connect on LinkedIn</a></p>
   </footer>
 
-  <!-- JavaScript (Optional) -->
   <script>
-    console.log(\"Welcome to Sandesh Patil's Portfolio!\");
-    // future enhancements can be added here
+    console.log("Portfolio loaded successfully");
   </script>
 </body>
 </html>

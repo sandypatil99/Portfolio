@@ -1,93 +1,223 @@
-
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> <!-- You might want to add a favicon.svg -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sandesh Patil | Software Engineer | AI/ML Enthusiast</title>
-  <meta name="description" content="Explore the portfolio of Sandesh Patil, a passionate Software Engineer and AI/ML enthusiast. Discover projects, skills, and experience in building innovative solutions with cutting-edge technologies. Ex-Microsoft.">
-  <meta name="keywords" content="Sandesh Patil, Portfolio, Software Engineer, AI, ML, Artificial Intelligence, Machine Learning, Web Developer, Full Stack Developer, React, Node.js, Python, Microsoft, Resume AI, Blog Generator">
-  <meta name="author" content="Sandesh Patil">
+  
+  <!-- SEO Tags -->
+  <meta name="description" content="Sandesh Patil - Frontend Developer portfolio showcasing skills, projects, and contact information." />
+  <meta name="keywords" content="Sandesh Patil, Web Developer, Frontend Developer, Portfolio, HTML, CSS, JavaScript" />
+  <meta name="author" content="Sandesh Patil" />
+  <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="no-referrer" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sandeshpatil.in/"> <!-- Replace with actual domain -->
-  <meta property="og:title" content="Sandesh Patil | Software Engineer | AI/ML Enthusiast">
-  <meta property="og:description" content="Explore the portfolio of Sandesh Patil, a passionate Software Engineer and AI/ML enthusiast.">
-  <meta property="og:image" content="https://picsum.photos/seed/sandesh-og/1200/630"> <!-- Replace with a specific OG image -->
+  <!-- Security Headers via Meta (Optional Fallbacks) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="no-referrer" />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://sandeshpatil.in/"> <!-- Replace with actual domain -->
-  <meta property="twitter:title" content="Sandesh Patil | Software Engineer | AI/ML Enthusiast">
-  <meta property="twitter:description" content="Explore the portfolio of Sandesh Patil, a passionate Software Engineer and AI/ML enthusiast.">
-  <meta property="twitter:image" content="https://picsum.photos/seed/sandesh-twitter/1200/600"> <!-- Replace with a specific Twitter card image -->
+  <title>Sandesh Patil | Frontend Developer</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'], // Using Inter as a modern, clean font
-          },
-          colors: {
-            primary: {
-              DEFAULT: '#007BFF', // A nice blue
-              light: '#66B2FF',
-              dark: '#0056b3',
-            },
-            secondary: '#6c757d', // Grayish
-            light: '#f8f9fa', // Light background
-            dark: '#343a40', // Dark text
-          },
-        },
-      },
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts & Favicon -->
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS Styles -->
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background: #0d47a1;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: #e3f2fd;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #1976d2;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0d47a1;
+    }
+
+    ul li {
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+    }
+
+    input, textarea {
+      padding: 0.6rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    button {
+      background: #1976d2;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
     }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sandesh Patil",
-    "url": "https://sandeshpatil.in/",
-    "sameAs": [
-      "https://www.linkedin.com/in/sandeshpatil10/",
-      "https://github.com/sandeshpatil10"
-    ],
-    "jobTitle": "Software Engineer",
-    "description": "Sandesh Patil is a Software Engineer and AI/ML Enthusiast specializing in building innovative solutions with cutting-edge technologies. Ex-Microsoft.",
-    "image": "https://picsum.photos/seed/sandesh-profile/400/400",
-     "knowsAbout": ["Software Engineering", "Artificial Intelligence", "Machine Learning", "Full-Stack Development", "React", "Node.js", "Python", "Cloud Computing"],
-     "alumniOf": {
-        "@type": "Organization",
-        "name": "Microsoft" 
-     }
-  }
-  </script>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.1.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "react/": "https://esm.sh/react@^19.1.0/"
-  }
-}
-</script>
 </head>
 <body>
-  <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+  <!-- Header / Navbar -->
+  <header>
+    <div class="logo">Sandesh Patil</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Hello, I'm Sandesh Patil</h1>
+    <p>Frontend Web Developer | Passionate about UI/UX & Web Performance</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a self-motivated Frontend Developer with hands-on experience building SEO-friendly and responsive websites using core technologies like HTML5, CSS3, and JavaScript.</p>
+    <p>I love crafting lightweight websites that are both user-friendly and performance-optimized, following Google's design principles and accessibility best practices.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <ul>
+      <li>
+        <strong>📚 Personal Bookshelf App</strong><br>
+        A React.js app using Open Library API & LocalStorage to manage a personal reading list.
+      </li>
+      <li>
+        <strong>💳 Business Card Generator</strong><br>
+        A customizable business card builder with ordering functionality using React and Node.js.
+      </li>
+      <li>
+        <strong>💼 UsabilityHub Clone</strong><br>
+        A simple landing page UI built with HTML & CSS to showcase usability testing tools.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sandesh Patil. All Rights Reserved.</p>
+    <p><a href="https://www.linkedin.com/in/sandeshpatil10/" style="color: #90caf9;">Connect on LinkedIn</a></p>
+  </footer>
+
+  <!-- JavaScript (Optional) -->
+  <script>
+    console.log(\"Welcome to Sandesh Patil's Portfolio!\");
+    // future enhancements can be added here
+  </script>
 </body>
 </html>
-<link rel="stylesheet" href="index.css">
-<script src="index.tsx" type="module"></script>

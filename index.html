@@ -1,206 +1,325 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Sandesh Patil - WordPress, Shopify, SEO, Front-End Developer">
-  <meta name="keywords" content="Sandesh Patil, WordPress Developer, Shopify Developer, SEO, Web Development Portfolio">
-  <meta name="author" content="Sandesh Patil">
-  <title>Sandesh Patil | Portfolio</title>
+  <!-- Required meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sandesh Patil — Frontend Developer</title>
+  <meta name="description" content="Sandesh Patil — Frontend developer. Portfolio showcasing responsive, accessible, and SEO-friendly projects built with modern HTML, CSS and JavaScript." />
+  <meta name="keywords" content="Sandesh Patil, frontend developer, portfolio, HTML, CSS, JavaScript, accessible web" />
+  <meta name="author" content="Sandesh Patil" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sandesh Patil — Frontend Developer" />
+  <meta property="og:description" content="Responsive, accessible portfolio with material design aesthetics." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
 
-  <style>
-    /* Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; scroll-behavior: smooth; }
+  <!-- Canonical (update to your domain after deploy) -->
+  <link rel="canonical" href="https://sandeshpatil.in/" />
 
-    body { background: #ffffff; color: #333; line-height: 1.6; }
+  <!-- Basic favicons (replace with your icons) -->
+  <link rel="icon" href="assets/images/profile.png" />
 
-    /* Sticky Navbar */
-    nav {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      background: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      z-index: 999;
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sandesh Patil",
+    "url": "https://sandeshpatil.in/",
+    "sameAs": [],
+    "jobTitle": "Frontend Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Independent"
     }
-    nav ul { display: flex; justify-content: center; list-style: none; flex-wrap: wrap; }
-    nav li { margin: 0 15px; }
-    nav a {
-      display: block;
-      padding: 12px 8px;
-      text-decoration: none;
-      font-weight: 500;
-      color: #333;
-      border-radius: 4px;
-      transition: 0.3s;
-    }
-    nav a:hover { background: #e8f0fe; }
+  }
+  </script>
 
-    /* Hero */
-    header {
-      text-align: center;
-      padding: 100px 20px 80px 20px;
-      background: #ffffff;
-    }
-    header h1 { font-size: 3rem; font-weight: 700; color: #212121; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; color: #555; margin-bottom: 20px; }
-    header a {
-      background: #4285f4;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    header a:hover { background: #0b66f2; }
+  <!-- Font Awesome CDN for icons -->
+<script src="https://kit.fontawesome.com/35d63201bc.js" crossorigin="anonymous"></script>
 
-    /* Sections */
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 40px 20px;
-      border-radius: 8px;
-    }
-    h2 { font-size: 2rem; color: #212121; margin-bottom: 20px; }
-
-    /* Projects */
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-    .project-card {
-      background: #f9f9f9;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-    .project-card h3 { color: #4285f4; margin-bottom: 12px; }
-
-    /* Skills */
-    .skills-list { display: flex; flex-wrap: wrap; gap: 15px; }
-    .skills-list span {
-      background: #e8f0fe; color: #1967d2; padding: 8px 15px; border-radius: 20px;
-      font-size: 0.9rem; font-weight: 500;
-    }
-
-    /* Contact */
-    .contact p { margin: 10px 0; font-size: 1rem; }
-    .contact a { color: #4285f4; text-decoration: none; font-weight: 500; }
-    .contact a:hover { text-decoration: underline; }
-
-    /* Footer */
-    footer { text-align: center; padding: 25px; background: #f9f9f9; color: #555; margin-top: 50px; font-size: 0.9rem; }
-
-    /* Responsive */
-    @media(max-width:768px){
-      header h1 { font-size: 2rem; }
-      h2 { font-size: 1.6rem; }
-      nav ul { flex-direction: column; }
-      nav li { margin: 5px 0; }
-    }
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- Accessibility skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Navbar -->
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="blogs.html">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
-  <header>
-    <h1>Sandesh Patil</h1>
-    <p>Web Developer | WordPress | Shopify | SEO | Front-End</p>
-    <a href="#contact">Hire Me</a>
+  <!-- Top controls (no navbar) -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <h1 class="brand" aria-label="Sandesh Patil — Frontend Developer">Sandesh Patil</h1>
+      <div class="controls">
+        <button id="contrastToggle" class="btn icon-btn" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+      </div>
+    </div>
   </header>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a dedicated Web Developer with expertise in <strong>WordPress, Shopify, SEO, and front-end development</strong>. I craft modern, responsive, and SEO-friendly websites that enhance online visibility and user engagement. With 1 year of professional experience, I have delivered projects ranging from landing pages to CMS solutions.</p>
-  </section>
+  <!-- Main content -->
+  <main id="main" class="container" role="main">
+    <!-- Hero / introduction -->
+    <!-- HERO SECTION -->
+<section class="hero" role="banner">
+  <div class="hero-content">
+ <div>
+    <h1 class="hero-title">Hi, I’m <span class="highlight">Sandesh</span></h1>
+    <p class="hero-subtitle">Frontend Developer | Creative Problem Solver</p>
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a href="https://github.com/" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+ </div>
+  <div class="hero-profile">
+    <img src="assets/images/profile.png" alt="Photo of Sandesh Patil" class="profile-image" />
+  </div>
+</div>
+</section>
 
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-      <li>Customized <strong>WordPress websites, Shopify stores, and landing pages</strong>.</li>
-      <li>Delivered <strong>40+ custom quotations in Kylas CRM</strong> using Ruby on Rails integration.</li>
-      <li>Published <strong>500+ SEO-friendly blogs</strong> with custom HTML/CSS formatting.</li>
-      <li>Created and deployed <strong>50+ email campaigns</strong> (HTML/CSS) on Salesforce.</li>
-      <li>Enhanced client traffic by <strong>35%</strong> with on-page SEO and performance tuning.</li>
-    </ul>
-  </section>
+<!-- Experience -->
+<section id="experience" class="experience-section">
+  <h2 class="section-title">Experience</h2>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Portfolio – SandeshPatil.in</h3>
-        <p>SEO-optimized portfolio with blog system. Indexed and ranked on Google.</p>
-      </div>
-      <div class="project-card">
-        <h3>Movie Web Panel</h3>
-        <p>React + Tailwind project with TMDB API, search, and pagination functionality.</p>
-      </div>
-      <div class="project-card">
-        <h3>E-Commerce Store</h3>
-        <p>Customized Shopify & WooCommerce stores with payments integration and SEO.</p>
-      </div>
-      <div class="project-card">
-        <h3>Marketing Landing Pages</h3>
-        <p>High-converting responsive landing pages for campaigns, improving leads.</p>
+  <div class="timeline">
+    <!-- First Company (Left) -->
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>Frontend Developer Intern</h3>
+        <p class="company">PreDrag System – Pune</p>
+        <p class="period">Apr 2023 – Jul 2023</p>
+        <p class="desc">
+          Designed and implemented a fully responsive UI for Evogym using HTML, CSS, and JavaScript. 
+          Collaborated with the team to ensure smooth user experience across devices.
+        </p>
       </div>
     </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <span>HTML</span>
-      <span>CSS</span>
+    <!-- Second Company (Right) -->
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>Frontend Developer (Remote)</h3>
+        <p class="company">Tryp.com</p>
+        <p class="period">Jul 2023</p>
+        <p class="desc">
+          Built a booking dashboard using TypeScript and React. 
+          Focused on user accessibility and delivering a modern, creative UI.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="skills-section">
+  <h2 class="section-title">Skills & Technologies</h2>
+
+  <div class="skills-container">
+    <div class="skill-item">
+      <i class="fab fa-html5 skill-icon"></i>
+      <span>HTML5</span>
+    </div>
+    <div class="skill-item">
+      <i class="fab fa-css3-alt skill-icon"></i>
+      <span>CSS3</span>
+    </div>
+    <div class="skill-item">
+      <i class="fab fa-js-square skill-icon"></i>
       <span>JavaScript</span>
-      <span>React.js</span>
-      <span>Tailwind CSS</span>
-      <span>Bootstrap</span>
-      <span>PHP</span>
-      <span>MySQL</span>
-      <span>WordPress</span>
-      <span>Shopify</span>
-      <span>SEO</span>
-      <span>Git</span>
-      <span>GitHub</span>
-      <span>cPanel</span>
     </div>
-  </section>
+    <div class="skill-item">
+      <i class="fab fa-react skill-icon"></i>
+      <span>React</span>
+    </div>
+    <div class="skill-item">
+      <i class="fab fa-bootstrap skill-icon"></i>
+      <span>Bootstrap</span>
+    </div>
+    <div class="skill-item">
+      <i class="fab fa-node skill-icon"></i>
+      <span>Node.js</span>
+    </div>
+    <div class="skill-item">
+      <i class="fas fa-database skill-icon"></i>
+      <span>MySQL</span>
+    </div>
+    <div class="skill-item">
+      <i class="fab fa-wordpress-simple skill-icon"></i>
+      <span>WordPress</span>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:sandeshjspatil@gmail.com">sandeshjspatil@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/sandeshjspatil" target="_blank">linkedin.com/in/sandeshjspatil</a></p>
-    <p>GitHub: <a href="https://github.com/sandeshjspatil" target="_blank">github.com/sandeshjspatil</a></p>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Sandesh Patil | Portfolio</p>
+    <!-- Highlights / skills (material cards) -->
+    <section class="cards" aria-labelledby="skills-title">
+      <h3 id="skills-title" class="section-title">Skills & Approach</h3>
+
+      <div class="grid">
+        <article class="card elevation-2" tabindex="0" aria-labelledby="c1-title">
+          <h4 id="c1-title">Performance First</h4>
+          <p>Minimal bundle, optimized images, semantic markup and fast rendering for better SEO and UX.</p>
+        </article>
+
+        <article class="card elevation-2" tabindex="0" aria-labelledby="c2-title">
+          <h4 id="c2-title">Accessible by Design</h4>
+          <p>Keyboard-first interactions, clear focus states, ARIA where required, and readable contrast ratios.</p>
+        </article>
+
+        <article class="card elevation-2" tabindex="0" aria-labelledby="c3-title">
+          <h4 id="c3-title">Material-inspired UI</h4>
+          <p>Elevation, consistent spacing, motion that communicates hierarchy and purpose.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <h3 id="projects-title" class="section-title">Featured Projects</h3>
+
+      <div class="grid project-grid">
+        <article class="project-card elevation-1" tabindex="0" aria-labelledby="p1-title">
+          <img class="project-thumb" src="assets/images/project.png" alt="screenshot: personal bookshelf app">
+          <div class="project-body">
+            <h4 id="p1-title">Personal Bookshelf</h4>
+            <p>React-like UX built with vanilla JS + IndexedDB-like persistence (demo).</p>
+            <p class="meta">HTML • JS • Accessibility</p>
+            <a class="link" href="#" aria-label="Open Personal Bookshelf project details">Live demo →</a>
+          </div>
+        </article>
+
+        <article class="project-card elevation-1" tabindex="0" aria-labelledby="p2-title">
+          <img class="project-thumb" src="assets/images/projects.png" alt="screenshot: visiting card generator">
+          <div class="project-body">
+            <h4 id="p2-title">Visiting Card Generator</h4>
+            <p>Customizable card generator with print-ready output and accessible forms.</p>
+            <p class="meta">HTML • Node (api-ready)</p>
+            <a class="link" href="#" aria-label="Open Visiting Card Generator project details">Live demo →</a>
+          </div>
+        </article>
+
+        <article class="project-card elevation-1" tabindex="0" aria-labelledby="p3-title">
+          <img class="project-thumb" src="assets/images/project.png" alt="screenshot: exercise club management">
+          <div class="project-body">
+            <h4 id="p3-title">Exercise Club Management</h4>
+            <p>Clean CRUD UI focusing on performance and simple UX for admins.</p>
+            <p class="meta">HTML • PHP • MySQL</p>
+            <a class="link" href="#" aria-label="Open Exercise Club Management project details">Live demo →</a>
+          </div>
+        </article>
+                <article class="project-card elevation-1" tabindex="0" aria-labelledby="p1-title">
+          <img class="project-thumb" src="assets/images/projects.png" alt="screenshot: personal bookshelf app">
+          <div class="project-body">
+            <h4 id="p1-title">Personal Bookshelf</h4>
+            <p>React-like UX built with vanilla JS + IndexedDB-like persistence (demo).</p>
+            <p class="meta">HTML • JS • Accessibility</p>
+            <a class="link" href="#" aria-label="Open Personal Bookshelf project details">Live demo →</a>
+          </div>
+        </article>
+
+        <article class="project-card elevation-1" tabindex="0" aria-labelledby="p2-title">
+          <img class="project-thumb" src="assets/images/project.png" alt="screenshot: visiting card generator">
+          <div class="project-body">
+            <h4 id="p2-title">Visiting Card Generator</h4>
+            <p>Customizable card generator with print-ready output and accessible forms.</p>
+            <p class="meta">HTML • Node (api-ready)</p>
+            <a class="link" href="#" aria-label="Open Visiting Card Generator project details">Live demo →</a>
+          </div>
+        </article>
+
+        <article class="project-card elevation-1" tabindex="0" aria-labelledby="p3-title">
+          <img class="project-thumb" src="assets/images/projects.png" alt="screenshot: exercise club management">
+          <div class="project-body">
+            <h4 id="p3-title">Exercise Club Management</h4>
+            <p>Clean CRUD UI focusing on performance and simple UX for admins.</p>
+            <p class="meta">HTML • PHP • MySQL</p>
+            <a class="link" href="#" aria-label="Open Exercise Club Management project details">Live demo →</a>
+          </div>
+        </article>
+        <article class="project-card elevation-1" tabindex="0" aria-labelledby="p1-title">
+          <img class="project-thumb" src="assets/images/projects.png" alt="screenshot: personal bookshelf app">
+          <div class="project-body">
+            <h4 id="p1-title">Personal Bookshelf</h4>
+            <p>React-like UX built with vanilla JS + IndexedDB-like persistence (demo).</p>
+            <p class="meta">HTML • JS • Accessibility</p>
+            <a class="link" href="#" aria-label="Open Personal Bookshelf project details">Live demo →</a>
+          </div>
+        </article>
+
+        <article class="project-card elevation-1" tabindex="0" aria-labelledby="p2-title">
+          <img class="project-thumb" src="assets/images/project.png" alt="screenshot: visiting card generator">
+          <div class="project-body">
+            <h4 id="p2-title">Visiting Card Generator</h4>
+            <p>Customizable card generator with print-ready output and accessible forms.</p>
+            <p class="meta">HTML • Node (api-ready)</p>
+            <a class="link" href="#" aria-label="Open Visiting Card Generator project details">Live demo →</a>
+          </div>
+        </article>
+
+        <article class="project-card elevation-1" tabindex="0" aria-labelledby="p3-title">
+          <img class="project-thumb" src="assets/images/projects.png" alt="screenshot: exercise club management">
+          <div class="project-body">
+            <h4 id="p3-title">Exercise Club Management</h4>
+            <p>Clean CRUD UI focusing on performance and simple UX for admins.</p>
+            <p class="meta">HTML • PHP • MySQL</p>
+            <a class="link" href="#" aria-label="Open Exercise Club Management project details">Live demo →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <h3 id="contact-title" class="section-title">Contact</h3>
+      <div class="contact-card elevation-3" role="region" aria-labelledby="contact-title">
+        <p>If you'd like to work together or have a question, email me or use the quick message below.</p>
+
+        <form id="contactForm" class="contact-form" action="#" method="post" novalidate>
+          <label>
+            <span class="label">Name</span>
+            <input type="text" name="name" required aria-required="true" autocomplete="name" />
+          </label>
+
+          <label>
+            <span class="label">Email</span>
+            <input type="email" name="email" required aria-required="true" autocomplete="email" />
+          </label>
+
+          <label>
+            <span class="label">Message</span>
+            <textarea name="message" rows="4" required aria-required="true"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Send message</button>
+            <button type="reset" class="btn ghost">Reset</button>
+          </div>
+
+          <p id="formStatus" role="status" aria-live="polite" class="form-status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating action button (material) -->
+  <a class="mailto" href="mailto:sandeshpatil38446@gmail.com" aria-label="Email Sandesh">✉️</a>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Sandesh Patil. Built with semantic HTML, accessible UX and responsive design.</p>
+      <p class="small">Made for performance & SEO — no frameworks.</p>
+    </div>
   </footer>
 
+  <!-- Scripts -->
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

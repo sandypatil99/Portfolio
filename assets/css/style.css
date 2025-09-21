@@ -135,8 +135,8 @@ html.dark{
 }
 
 .profile-image {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ccc;
@@ -151,13 +151,30 @@ html.dark{
 
 /* Responsive */
 @media (max-width: 600px) {
+  .hero-content {
+    flex-direction: column;
+    flex-flow: column-reverse;
+    padding: 1rem 2rem;
+    gap: 0;
+  }
+
   .hero-title {
     font-size: 2rem;
   }
   .hero-subtitle {
     font-size: 1rem;
   }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
 }
+
+
+
+
+
 
 .experience-section {
   max-width: 900px;
@@ -282,12 +299,12 @@ html.dark{
     width: 100%;
     left: 0;
     text-align: left;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 20px 0px 40px;
   }
 
   .timeline-item.left .timeline-content::after,
   .timeline-item.right .timeline-content::after {
-    left: -50px;
+    left: -30px;
     right: auto;
   }
 

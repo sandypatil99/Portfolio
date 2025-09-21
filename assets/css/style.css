@@ -149,6 +149,25 @@ html.dark{
 }
 
 
+/* ================= Hero Section Dark Mode ================= */
+html.dark .hero-content {
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+html.dark .hero-title {
+  color: #f5f5f5;
+}
+
+html.dark .highlight {
+  color: #90caf9; /* lighter google blue for dark mode */
+}
+
+html.dark .hero-subtitle {
+  color: #ccc;
+}
+
+
 /* Responsive */
 @media (max-width: 600px) {
   .hero-content {
@@ -291,6 +310,52 @@ html.dark{
   box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 
+
+/* ================= Experience Section Dark Mode ================= */
+html.dark .experience-section {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+html.dark .section-title {
+  color: #f5f5f5;
+}
+
+/* Center vertical line */
+html.dark .timeline::before {
+  background-color: #90caf9; /* lighter blue for visibility */
+}
+
+/* Content card */
+html.dark .timeline-content {
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  border: 1px solid #333;
+}
+
+html.dark .timeline-content h3 {
+  color: #90caf9;
+}
+
+html.dark .company {
+  color: #ddd;
+}
+
+html.dark .period {
+  color: #aaa;
+}
+
+html.dark .desc {
+  color: #ccc;
+}
+
+/* Timeline dots */
+html.dark .timeline-item.left .timeline-content::after,
+html.dark .timeline-item.right .timeline-content::after {
+  background-color: #90caf9;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .timeline-item, 
@@ -402,13 +467,15 @@ html.dark .skill-item:hover .skill-icon {
 }
 
 
-
+.education-section {
+  margin: auto;
+}
 
 /* Cards grid */
 .cards .section-title,
 .projects .section-title,
 .contact .section-title{margin:1rem 0 1rem 0}
-.grid{display:grid;grid-template-columns:repeat(1,1fr);gap:1rem}
+.grid{display:grid;grid-template-columns:repeat(1,1fr);gap:1rem; margin: auto;}
 @media(min-width:640px){ .grid{grid-template-columns:repeat(2,1fr)} }
 @media(min-width:980px){ .grid{grid-template-columns:repeat(3,1fr)} }
 

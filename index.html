@@ -44,15 +44,12 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Accessibility skip link -->
-  <a class="skip-link" href="#main">Skip to content</a>
-
   <!-- Top controls (no navbar) -->
   <header class="site-header" role="banner">
     <div class="header-inner">
       <h1 class="brand" aria-label="Sandesh Patil — UI Developer">SP</h1>
       <div class="controls">
-        <button id="contrastToggle" class="btn icon-btn" aria-pressed="false" aria-label="Toggle dark mode">Dark</button>
+        <button id="contrastToggle" class="btn icon-btn" aria-pressed="false" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
       </div>
     </div>
   </header>
@@ -85,6 +82,7 @@
 </div>
 </section>
 
+<div class="down-arrow"><i class="fa fa-arrow-down"></i></div>
 
 
 <!-- Experience -->
@@ -283,7 +281,6 @@
 <!-- Highlights / skills (material cards) -->
     <section class="cards" aria-labelledby="skills-title">
       <h3 id="skills-title" class="section-title">Education</h3>
-
       <div class="grid education-section">
         <article class="card elevation-2" tabindex="0" aria-labelledby="c1-title">
           <img class="project-thumb" src="assets/images/dyp.png" alt="dyp">
@@ -308,7 +305,7 @@
       <div class="contact-card elevation-3" role="region" aria-labelledby="contact-title">
         <p>If you'd like to work together or have a question, email me or use the quick message below.</p>
 
-        <form id="contactForm" class="contact-form" action="#" method="post" novalidate>
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/xnqzjvjd" method="post" novalidate>
           <label>
             <span class="label">Name</span>
             <input type="text" name="name" required aria-required="true" autocomplete="name" />
@@ -336,8 +333,9 @@
   </main>
 
   <!-- Floating action button (material) -->
-  <a class="mailto" href="mailto:sandeshpatil38446@gmail.com" aria-label="Email Sandesh">✉️</a>
+   <a href="mailto:sandeshjspatil@gmail.com" class="mailto" target="_blank" aria-label="Email Sandesh"><i class="fas fa-envelope"></i ></a>
 
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <p>&copy; <span id="year"></span> Sandesh Patil. Built with semantic HTML, accessible UX and responsive design.</p>

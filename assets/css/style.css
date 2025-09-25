@@ -67,7 +67,8 @@ html.dark{
 
 /* Header */
 .site-header{
-  background:var(--surface);
+  background: var(--surface);
+  /* background: rgba(255, 255, 255, 0.1); Transparent background */
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(0,0,0,0.04);
   position: fixed;
@@ -96,6 +97,17 @@ html.dark{
   text-decoration-thickness: 2px;
   text-decoration-color: var(--accent);
 }
+
+.fa-sun{
+  display:none
+}
+  /* When dark mode is active, swap icons */
+    html.dark .fa-moon {
+      display: none;
+    }
+    html.dark .fa-sun {
+      display: inline;
+    }
 
 .controls{display:flex;gap:.5rem;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .75rem;border-radius:10px;border:none;background:transparent;color:var(--text);cursor:pointer;text-decoration:none}

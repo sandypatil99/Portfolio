@@ -129,12 +129,14 @@ html.dark{
   align-items: center;
   text-align: center;
   padding: 0rem;
+  border: 3px solid transparent;
 }
 
-.hero-content{
+.hero-content {
+  position: relative;
   display: flex;
   gap: 1rem;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   padding: 1rem 4rem;
   margin: 0 1rem;
@@ -176,21 +178,40 @@ html.dark{
   color: #1976d2;
 }
 
-.profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+.hero-profile {
+  position: absolute;
+  top: -60px; /* Adjust as needed */
+  right: 4rem;
+  z-index: 2;
+  border-radius: 20px;
+  filter: drop-shadow(-12px 1px 1px rgba(0,0,0,0.5));
+}
+
+.hero-profile .profile-image {
   object-fit: cover;
-  border: 3px solid #ccc;
-  margin-top: 1.5rem;
-  transition: transform 0.3s ease, color 0.3s ease;
+  object-position: top;
+  width: 100%;
+  height: 300px;
+  margin-top: 0;
+  display: block;
+   mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 98%, rgba(0,0,0,0));
 }
 
-.profile-image:hover {
-    border: #1976d2 3px solid;
+/* Responsive: stack image above content */
+@media (max-width: 767px) {
+  .hero-profile {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: -65px;
+    gap: 0rem;
+  }
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
-
-
 /* ================= Hero Section Dark Mode ================= */
 html.dark .hero-content {
   background: #1f2937;
@@ -591,3 +612,6 @@ a:focus, button:focus, input:focus, textarea:focus{box-shadow:var(--focus);borde
 /* Small utilities */
 .section-title{font-size:1.125rem;margin-bottom:.5rem}
 .small{font-size:.85rem;color:var(--muted)}
+
+
+

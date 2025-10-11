@@ -1,0 +1,17 @@
+/* Utilieties means theose style clasess are  repeted use they are wirte once time and use anywhere */
+
+/* Text color, size */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: var(--text);
+}
+html.dark .section-title {
+  color: #f5f5f5;
+}
+
+
+/* Cards */
+

@@ -13,13 +13,12 @@
   --focus: 3px solid rgba(29,78,216,0.18);
 }
 
-*
-{
+*{
   box-sizing:border-box;
 }
 
 html,body{
-  height:100%
+  height:100%;
 }
 
 body{
@@ -98,16 +97,18 @@ html.dark{
   text-decoration-color: var(--accent);
 }
 
+
+
 .fa-sun{
   display:none
 }
-  /* When dark mode is active, swap icons */
-    html.dark .fa-moon {
-      display: none;
-    }
-    html.dark .fa-sun {
-      display: inline;
-    }
+/* When dark mode is active, swap icons */
+html.dark .fa-moon {
+  display: none;
+}
+html.dark .fa-sun {
+  display: inline;
+}
 
 .controls{display:flex;gap:.5rem;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .75rem;border-radius:10px;border:none;background:transparent;color:var(--text);cursor:pointer;text-decoration:none}
@@ -212,7 +213,7 @@ html.dark{
     align-items: center;
   }
 }
-/* ================= Hero Section Dark Mode ================= */
+/*  Hero Section Dark Mode */
 html.dark .hero-content {
   background: #1f2937;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
@@ -260,7 +261,7 @@ html.dark .social-icons a:hover {
   }
 }
 
-
+/* line PNG Image */
 .line-img{
   width: 100%;
   height: 100px;
@@ -268,13 +269,7 @@ html.dark .social-icons a:hover {
   align-items: center;
   margin: 0 auto;
   opacity: 1;
-  filter: brightness(10);
 }
-
-
-
-
-
 
 
 /* Experience Section */
@@ -286,13 +281,7 @@ html.dark .social-icons a:hover {
   position: relative;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 60px;
-  color: #333;
-}
+
 
 /* Timeline container */
 .timeline {
@@ -399,9 +388,6 @@ html.dark .experience-section {
   color: #f5f5f5;
 }
 
-html.dark .section-title {
-  color: #f5f5f5;
-}
 
 /* Center vertical line */
 html.dark .timeline::before {
@@ -470,12 +456,7 @@ html.dark .timeline-item.right .timeline-content::after {
   font-family: Arial, sans-serif;
 }
 
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: var(--text);
-}
+
 
 .skills-container {
   display: flex;
@@ -553,9 +534,11 @@ html.dark .skill-item:hover .skill-icon {
 }
 
 /* Cards grid */
-.cards .section-title,
+/* .cards .section-title,
 .projects .section-title,
-.contact .section-title{margin:1rem 0 1rem 0}
+.contact .section-title{margin:1rem 0 1rem 0} */
+
+
 .grid{display:grid;grid-template-columns:repeat(1,1fr);gap:1rem; margin: auto;}
 @media(min-width:640px){ .grid{grid-template-columns:repeat(2,1fr)} }
 @media(min-width:980px){ .grid{grid-template-columns:repeat(3,1fr)} }
@@ -570,10 +553,56 @@ html.dark .skill-item:hover .skill-icon {
 .elevation-2{box-shadow:var(--e2)}
 .elevation-3{box-shadow:0 12px 40px rgba(2,6,23,0.06)}
 
+
+    /* Tab navigation */
+    .tab-nav {
+      display: flex;
+    }
+
+    .tab-nav button {
+      justify-items: space-between;
+      background: none;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-bottom: 1px solid #ccc;
+      color: var(--text);
+    }
+    .tab-nav button.active {
+      border: 1px solid #ccc;
+      border-radius: 7px 7px 0 0;
+      border-bottom: none;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    .html.dark .tab-nav button{
+      color: var(--surface);
+    }
+
+    /* Tab content */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-pane {
+      border-top: none;
+      padding-top: 40px;
+    }
+
+
+
+
+
 /* Project specific */
 .project-grid{display:grid;grid-template-columns:1fr;gap:1rem}
 @media(min-width:880px){ .project-grid{grid-template-columns:repeat(3,1fr)} }
-.project-thumb{width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;display:block}
+.project-thumb, .certificate-image{width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;display:block}
 .project-body{padding:.75rem}
 .meta{color:var(--muted);font-size:.9rem;margin:.45rem 0}
 .link{color:var(--accent);text-decoration:none;font-weight:600}
@@ -650,10 +679,6 @@ a:focus, button:focus, input:focus, textarea:focus{box-shadow:var(--focus);borde
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
-
-/* Small utilities */
-.section-title{font-size:1.125rem;margin-bottom:.5rem}
-.small{font-size:.85rem;color:var(--muted)}
 
 
 

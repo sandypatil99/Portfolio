@@ -42,6 +42,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet"  href="assets/css/utilies.css"
 </head>
 <body>
   <!-- Top controls (no navbar) -->
@@ -63,16 +64,16 @@
 <div class="hero-content">
  <div>
     <h1 class="hero-title">Hi, I’m <span class="highlight">Sandesh Patil</span></h1>
-    <p class="hero-subtitle">UI Developer | Creative Problem Solver</p>
+    <p class="hero-subtitle">Frontend & WordPress Developer</p>
     <!-- Social Icons -->
     <div class="social-icons">
-      <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+      <a href="https://linkedin.com/in/sandeshjspatil" target="_blank" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://github.com/" target="_blank" aria-label="GitHub">
+      <a href="https://github.com/sandypatil99" target="_blank" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+      <a href="https://x.com/SandeshPat54955" target="_blank" aria-label="Twitter">
         <i class="fab fa-twitter"></i>
       </a>
     </div>
@@ -95,7 +96,7 @@
     <!-- First Company (Left) -->
     <div class="timeline-item left">
       <div class="timeline-content">
-        <h3>UI Developer Intern</h3>
+        <h3>Web Developer Intern</h3>
         <p class="company">Amura Marketing Technology – Pune</p>
         <p class="period">March 2025 – Sep 2025</p>
         <p class="desc">
@@ -164,7 +165,7 @@
 
     <!-- Highlights / skills (material cards) -->
     <section class="cards" aria-labelledby="skills-title">
-      <h3 id="skills-title" class="section-title">Skills & Approach</h3>
+      <h3 id="skills-title" class="section-title">Approach</h3>
 
       <div class="grid">
         <article class="card elevation-2" tabindex="0" aria-labelledby="c1-title">
@@ -187,23 +188,20 @@
     <!-- Projects -->
     <section id="projects" class="projects" aria-labelledby="projects-title">
       <h3 id="projects-title" class="section-title">Featured Projects</h3>
-      
-      
-      <!-- <nav class="project-filters" aria-label="Project category filters">
-        <ul class="filter-list" role="tablist" aria-label="Project categories">
-          <li role="presentation">
-            <button role="tab" aria-selected="true" aria-controls="all-projects" id="all-tab" tabindex="0">All</button>
-          </li>
-          <li role="presentation">
-            <button role="tab" aria-selected="false" aria-controls="web-projects" id="web-tab" tabindex="-1">Web</button>
-          </li>
-          <li role="presentation">
-            <button role="tab" aria-selected="false" aria-controls="design-projects" id="design-tab" tabindex="-1">Design</button>
-          </li>
-        </ul>
-      </nav> -->
 
+    <!-- Tab navigation -->
+    <div class="tab-container">
+    <!-- Tabs -->
+    <div class="tab-nav">
+      <button class="tab-link active" data-tab="all">All</button>
+      <button class="tab-link" data-tab="web-app">Web App</button>
+      <button class="tab-link" data-tab="theme-plugin">WP Theme & Plugin</button>
+      <button class="tab-link" data-tab="landing-page">Landing Page</button>
+    </div>
 
+    <!-- Tab Content -->
+    <div id="all" class="tab-content active">
+      <div class="tab-pane">
       <div class="grid project-grid">
         <article class="project-card elevation-1" tabindex="0" aria-labelledby="p1-title">
           <img class="project-thumb" src="assets/images/MovieDB - Web Panel.png" alt="screenshot: MovieDB - Web Panel">
@@ -235,9 +233,70 @@
             <a class="link" href="https://vaarivana.com/" target="_blank" aria-label="Open Vaarivana - Landing Page project details">Live demo →</a>
           </div>
         </article>
-
-
       </div>
+      </div>
+    </div>
+
+    <div id="web-app" class="tab-content">
+      <div class="tab-pane">
+      <div class="grid project-grid">
+        <article class="project-card elevation-1" tabindex="0" aria-labelledby="p1-title">
+          <img class="project-thumb" src="assets/images/MovieDB - Web Panel.png" alt="screenshot: MovieDB - Web Panel">
+          <div class="project-body">
+            <h4 id="p1-title">MovieDB - Web Panel</h4>
+            <p>Developed a responsive web panel using React.js with pages for Popular, Top Rated, Upcoming Movies, and Single Movie Details to enhance user browsing experience. Integrated the TMDB API to fetch real-time movie data dynamically...</p>
+            <p class="meta">React • Tailwind CSS • TMDB API</p>
+            <a class="link" href="https://topmovie-db.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open MovieDB - Web Panel project details">Live demo →</a>
+          </div>
+        </article>
+
+        <article class="project-card elevation-1" tabindex="-1" id="#web-tab" aria-labelledby="p3-title">
+          <img class="project-thumb" src="assets/images/Club - Management.png" alt="screenshot: exercise club management">
+          <div class="project-body">
+            <h4 id="p3-title">Exercise Club Management</h4>
+            <p>Admin based web application to manage club activities, events, and memberships.
+• Designed an intuitive UI for creating, updating, and tracking event and member details.Clean CRUD UI focusing on performance and simple UX for admins.</p>
+            <p class="meta">HTML • PHP • MySQL</p>
+            <a class="link" href="#" aria-label="Open Exercise Club Management project details">Live demo →</a>
+          </div>
+        </article>
+        </div>
+        
+      </div>
+    </div>
+
+    <div id="theme-plugin" class="tab-content">
+      <div class="tab-pane">
+      <div class="grid project-grid">
+        <article class="project-card elevation-1" tabindex="-1" id="#web-tab" aria-labelledby="p3-title">
+          <img class="project-thumb" src="assets/images/Club - Management.png" alt="screenshot: theme plugin">
+          <h4>Custom Theme - NGO</h4>
+          <p>Developed a customizable theme plugin for a web application, allowing users to switch between different themes seamlessly. Implemented using JavaScript and CSS variables for dynamic styling.</p>
+          <p class="meta">JavaScript • CSS • Web Development</p>
+          <a class="link" href="#" aria-label="Open Theme Plugin project details">Live demo →</a>
+        </article>
+      </div>
+      </div>
+    </div>
+
+    <div id="landing-page" class="tab-content">
+      <div class="tab-pane">
+        <div class="grid project-grid">
+        <article class="project-card elevation-1" tabindex="-1" id="#web-tab" aria-labelledby="p3-title">
+          <img class="project-thumb" src="assets/images/vaarivana - landing page.png" alt="screenshot: exercise club management">
+          <div class="project-body">
+            <h4 id="p3-title">Vaarivana - Landing Page</h4>
+            <p>Developed a responsive and visually appealing landing page for Vaarivana using modern web technologies. The design highlights clean UI, engaging layout, and smooth user experience, optimized for both desktop and mobile devices.</p>
+            <p class="meta">HTML • SCSS • JavaScript</p>
+            <a class="link" href="https://vaarivana.com/" target="_blank" aria-label="Open Vaarivana - Landing Page project details">Live demo →</a>
+          </div>
+        </article>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
     </section>
 
 <!-- Highlights / skills (material cards) -->
@@ -259,6 +318,33 @@
         </article>
       </div>
     </section>
+
+
+  <!-- Certificate of course completion -->
+    <section class="cards" aria-labelledby="skills-title">
+      <h3 id="skills-title" class="section-title">Reward Certificates</h3>
+
+      <div class="grid">
+        <article class="card elevation-2" id="web-development" tabindex="0" aria-labelledby="c1-title">
+          <img class="certificate-image" src="assets/images/web-development.png" alt="Web Development">
+          <h4 id="c1-title">Web Development</h4>
+          <p>Comprehensive understanding of web development principles, including HTML, CSS, and JavaScript.</p>
+        </article>
+
+        <article class="card elevation-2" tabindex="0" aria-labelledby="c2-title">
+          <img class="certificate-image" src="assets/images/JavaScript-algorithms-&-data-structures.png" alt="JavaScript Algorithms & Data Structures">
+          <h4 id="c2-title">JavaScript Algorithms & Data Structures</h4>
+          <p>Mastering fundamental algorithms and data structures for efficient problem-solving.</p>
+        </article>
+        
+        <article class="card elevation-2" tabindex="0" aria-labelledby="c3-title">
+          <img class="certificate-image" src="assets/images/React.js.png" alt="React.js Course">
+          <h4 id="c3-title">React.js Course</h4>
+          <p>Building interactive UIs, component-based architecture, and state management with hooks.</p>
+        </article>
+      </div>
+    </section>
+
 
 
     <!-- Contact / CTA -->

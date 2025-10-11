@@ -63,3 +63,25 @@
   });
 
 })();
+
+
+
+
+   /* Tab navigation */
+
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const target = link.getAttribute('data-tab');
+
+        // Remove active from all tabs and content
+        tabLinks.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        // Add active to current tab and content
+        link.classList.add('active');
+        document.getElementById(target).classList.add('active');
+      });
+    });

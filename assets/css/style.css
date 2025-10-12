@@ -689,8 +689,31 @@ html.dark .contact-form textarea{border:1px solid rgba(255,255,255,0.1);color:va
 
 
 /* Floating action button */
-.mailto{position:fixed;right:1.25rem;bottom:1.25rem;background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:999px;box-shadow:var(--e2);text-decoration:none;font-size:1.1rem;}
-.mailto:hover{box-shadow:0 12px 40px rgba(2,6,23,0.3)}
+.like {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1.20rem;
+  bottom: 1.20rem;
+  z-index: 1000;
+}
+
+.love-my-work  {
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+.love-my-work img {
+  width: 60px;
+  height: auto;
+}
+.heart-count {
+  margin-top: 0.2rem;
+  font-size: 0.775rem;
+  color: var(--text);
+  text-align: center;
+}
+
 
 
 

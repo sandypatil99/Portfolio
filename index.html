@@ -42,8 +42,9 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet"  href="assets/css/utilies.css"
+  <link rel="stylesheet"  href="assets/css/utilies.css">
 </head>
+
 <body>
   <!-- Top controls (no navbar) -->
   <header class="site-header" role="banner">
@@ -57,7 +58,6 @@
 
   <!-- Main content -->
   <main id="main" class="container" role="main">
-    <!-- Hero / introduction -->
 
     <!-- HERO SECTION -->
 <section class="hero" role="banner">
@@ -65,8 +65,12 @@
  <div>
     <h1 class="hero-title">Hi, I’m <span class="highlight">Sandesh Patil</span></h1>
     <p class="hero-subtitle">Frontend & WordPress Developer</p>
+    <div class="btn-group " role="region" aria-label="Primary actions">
+      <a class="btn ghost" href="assets/resume file/Sandesh Patil - Resume.pdf" download>Download Resume</a>
+      <a class="btn ghost" href="#contact">Contact Me</a>
+    </div>
     <!-- Social Icons -->
-    <div class="social-icons">
+    <div class="social-icons " role="region" aria-label="Social media links">
       <a href="https://linkedin.com/in/sandeshjspatil" target="_blank" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
@@ -88,43 +92,32 @@
 
 <div><img class="line-img"  src="/assets/images/verticle-three-line.svg" alt=""></div>
 
-<!-- Experience -->
-<section id="experience" class="experience-section">
-  <h2 class="section-title">Experience</h2>
 
-  <div class="timeline">
-    <!-- First Company (Left) -->
-    <div class="timeline-item left">
-      <div class="timeline-content">
-        <h3>Web Developer Intern</h3>
-        <p class="company">Amura Marketing Technology – Pune</p>
-        <p class="period">March 2025 – Sep 2025</p>
-        <p class="desc">
-          Designed and implemented a fully responsive UI for Evogym using HTML, CSS, and JavaScript. 
-          Collaborated with the team to ensure smooth user experience across devices.
-        </p>
-      </div>
-    </div>
+<!-- Highlights / skills (material cards) -->
+<section class="cards" aria-labelledby="skills-title">
+      <h3 id="skills-title" class="section-title">Services</h3>
 
-    <!-- Second Company (Right) -->
-    <div class="timeline-item right">
-      <div class="timeline-content">
-        <h3>Web Developer Intern (Remote)</h3>
-        <p class="company">Unified Mentor Pvt Ltd</p>
-        <p class="period">Aug 2024 – Sep 2024</p>
-        <p class="desc">
-          Built a booking dashboard using TypeScript and React. 
-          Focused on user accessibility and delivering a modern, creative UI.
-        </p>
+      <div class="grid">
+        <article class="card elevation-2" tabindex="0" aria-labelledby="c1-title">
+          <h4 id="c1-title">Frontend Development</h4>
+          <p>ReactJS, Tailwind, Responsive UI</p>
+        </article>
+
+        <article class="card elevation-2" tabindex="0" aria-labelledby="c2-title">
+          <h4 id="c2-title">WordPress Website Development</h4>
+          <p>Custom themes & plugins</p>
+        </article>
+
+        <article class="card elevation-2" tabindex="0" aria-labelledby="c3-title">
+          <h4 id="c3-title">SEO Optimization</h4>
+          <p>Improve speed, ranking, and visibility</p>
+        </article>
       </div>
-    </div>
-  </div>
 </section>
-
 
 <!-- Skills -->
 <section id="skills" class="skills-section">
-  <h2 class="section-title">Skills & Technologies</h2>
+  <h2 class="section-title">Skills</h2>
 
   <div class="skills-container">
     <div class="skill-item">
@@ -162,35 +155,12 @@
   </div>
 </section>
 
+<!-- Projects -->
+<section id="projects" class="projects" aria-labelledby="projects-title">
+  <h3 id="projects-title" class="section-title">Featured Projects</h3>
 
-    <!-- Highlights / skills (material cards) -->
-    <section class="cards" aria-labelledby="skills-title">
-      <h3 id="skills-title" class="section-title">Approach</h3>
-
-      <div class="grid">
-        <article class="card elevation-2" tabindex="0" aria-labelledby="c1-title">
-          <h4 id="c1-title">Performance First</h4>
-          <p>Minimal bundle, optimized images, semantic markup and fast rendering for better SEO and UX.</p>
-        </article>
-
-        <article class="card elevation-2" tabindex="0" aria-labelledby="c2-title">
-          <h4 id="c2-title">Accessible by Design</h4>
-          <p>Keyboard-first interactions, clear focus states, ARIA where required, and readable contrast ratios.</p>
-        </article>
-
-        <article class="card elevation-2" tabindex="0" aria-labelledby="c3-title">
-          <h4 id="c3-title">Material-inspired UI</h4>
-          <p>Elevation, consistent spacing, motion that communicates hierarchy and purpose.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="projects" aria-labelledby="projects-title">
-      <h3 id="projects-title" class="section-title">Featured Projects</h3>
-
-    <!-- Tab navigation -->
-    <div class="tab-container">
+  <!-- Tab navigation -->
+  <div class="tab-container">
     <!-- Tabs -->
     <div class="tab-nav">
       <button class="tab-link active" data-tab="all">All</button>
@@ -295,12 +265,54 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- About Me -->
+<section class="about-me" aria-labelledby="about-me">
+  <h2 class="section-title">About Me</h2>
+  <div class="card about-me elevation-3" role="region" aria-labelledby="about-title">
+      <p>I'm a passionate web developer with a focus on creating seamless user experiences. I love working with modern technologies and continuously learning new skills.</p> 
+      <p>When I'm not coding, you can find me exploring nature, reading tech blogs, or experimenting with new recipes in the kitchen.</p>
+      <p>Feel free to reach out if you'd like to collaborate on a project or just say hello!</p>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="experience-section">
+  <h2 class="section-title">Experience</h2>
+
+  <div class="timeline">
+    <!-- First Company (Left) -->
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>Frontend Developer Intern</h3>
+        <p class="company">Amura Marketing Technology – Pune</p>
+        <p class="period">March 2025 – Sep 2025</p>
+        <p class="desc">
+          Designed and implemented a fully responsive UI for Evogym using HTML, CSS, and JavaScript. 
+          Collaborated with the team to ensure smooth user experience across devices.
+        </p>
+      </div>
     </div>
 
-    </section>
+    <!-- Second Company (Right) -->
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>Web Developer Intern (Remote)</h3>
+        <p class="company">Unified Mentor Pvt Ltd</p>
+        <p class="period">Aug 2024 – Sep 2024</p>
+        <p class="desc">
+          Built a booking dashboard using TypeScript and React. 
+          Focused on user accessibility and delivering a modern, creative UI.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- Highlights / skills (material cards) -->
-    <section class="education" >
+<!-- Education -->
+<section class="education" >
       <h3 id="skills-title" class="section-title">Education</h3>
       <div class=" education-section">
         <article class="card elevation-2" tabindex="0" aria-labelledby="c1-title">
@@ -317,11 +329,10 @@
           <p><i>June 2017 - March 2020</i></p>
         </article>
       </div>
-    </section>
+</section>
 
-
-  <!-- Certificate of course completion -->
-    <section class="cards" aria-labelledby="skills-title">
+<!-- Certificates -->
+<section class="cards" aria-labelledby="skills-title">
       <h3 id="skills-title" class="section-title">Reward Certificates</h3>
 
       <div class="grid">
@@ -343,57 +354,61 @@
           <p>Building interactive UIs, component-based architecture, and state management with hooks.</p>
         </article>
       </div>
-    </section>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact" aria-labelledby="contact-title">
+<h2 class="section-title">Contact</h2>
+
+<div class="contact-card elevation-3 card " role="region" aria-labelledby="contact-title">
+<div>
+<p>If you'd like to work together or have a question, email me or use the quick message below.</p>
+<form id="contactForm" class="contact-form" action="https://formspree.io/f/xnqzjvjd" method="post" novalidate>
+<label>
+<span class="label">Name</span>
+<input type="text" name="name" placeholder="Your Name" required aria-required="true" autocomplete="name" />
+</label>
+<label>
+<span class="label">Email</span>
+<input type="email" name="email" placeholder="Your Email" required aria-required="true" autocomplete="email" />
+</label>
+
+<label>
+<span class="label">Message</span>
+<textarea name="message" rows="4" placeholder="Write Your Message Here..." required aria-required="true"></textarea>
+</label>
+
+<div class="form-actions">
+<button type="submit" class="btn primary">Send message</button>
+</div>
+
+<p id="formStatus" role="status" aria-live="polite" class="form-status" hidden></p>
+</form>
 
 
-
-    <!-- Contact / CTA -->
-           <h3 id="skills-title" class="section-title"></h3>
-
-    <section id="contact" class="contact" aria-labelledby="contact-title">
-      <div class="contact-card elevation-3 card" role="region" aria-labelledby="contact-title">
-        <h2 id="contact-title" class="section-title">Contact</h2>
-        <p>If you'd like to work together or have a question, email me or use the quick message below.</p>
-        <form id="contactForm" class="contact-form" action="https://formspree.io/f/xnqzjvjd" method="post" novalidate>
-          <label>
-            <span class="label">Name</span>
-            <input type="text" name="name" required aria-required="true" autocomplete="name" />
-          </label>
-
-          <label>
-            <span class="label">Email</span>
-            <input type="email" name="email" required aria-required="true" autocomplete="email" />
-          </label>
-
-          <label>
-            <span class="label">Message</span>
-            <textarea name="message" rows="4" required aria-required="true"></textarea>
-          </label>
-
-          <div class="form-actions">
-            <button type="submit" class="btn primary">Send message</button>
-            <button type="reset" class="btn ghost">Reset</button>
-          </div>
-
-          <p id="formStatus" role="status" aria-live="polite" class="form-status" hidden></p>
-        </form>
-      </div>
-
-    <div class="card about-me elevation-3" role="region" aria-labelledby="about-title">
-      <h2 class="section-title">About Me</h2>
-      <p>I'm a passionate web developer with a focus on creating seamless user experiences. I love working with modern technologies and continuously learning new skills.</p> 
-      <p>When I'm not coding, you can find me exploring nature, reading tech blogs, or experimenting with new recipes in the kitchen.</p>
-      <p>Feel free to reach out if you'd like to collaborate on a project or just say hello!</p>
-    </div>
-    </section>
-
-  </main>
+</div>
+</div>
+</section>
+</main>
 
   <!-- Floating action button (material) -->
    <a href="mailto:sandeshjspatil@gmail.com" class="mailto" target="_blank" aria-label="Email Sandesh"><i class="fas fa-envelope"></i ></a>
 
   <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
+    <!-- Social Icons -->
+<div class="social-icons " role="region" aria-label="Social media links">
+      <a href="https://linkedin.com/in/sandeshjspatil" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/sandypatil99" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://x.com/SandeshPat54955" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+</div>
+
     <div class="footer-inner">
       <p>&copy; <span id="year"></span> Sandesh Patil. Built with semantic HTML, accessible UX and responsive design. <img src="/assets/images/imgi_39_heart.BsN-EPlA.svg" alt=""></p>
       <p class="small">Made for performance & SEO — no frameworks.</p>

@@ -5,7 +5,7 @@
   --surface: #ffffff;
   --text: #1f2937;
   --muted: #6b7280;
-  --accent: #1d4ed8; /* blue-700 */
+  --accent: #1976d2; /* blue-700 */
   --e1: 0 1px 3px rgba(15,23,42,0.06);
   --e2: 0 6px 18px rgba(15,23,42,0.12);
   --radius: 12px;
@@ -38,7 +38,7 @@ html.dark{
   --surface: #0f1724;
   --text: #e6eef8;
   --muted: #9aa7bf;
-  --accent: #60a5fa;
+  --accent: #1976d2; /* blue-700 */
   --e1: 0 1px 3px rgba(2,6,23,0.6);
   --e2: 0 8px 30px rgba(2,6,23,0.6);
 }
@@ -110,11 +110,17 @@ html.dark .fa-sun {
   display: inline;
 }
 
-.controls{display:flex;gap:.5rem;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .75rem;border-radius:10px;border:none;background:transparent;color:var(--text);cursor:pointer;text-decoration:none}
-.btn.primary{background:var(--accent);color:#fff;box-shadow:var(--e1)}
-.btn.ghost{border:1px solid rgba(0,0,0,0.06);padding:.45rem .65rem}
+.controls{display:flex;gap:.5rem;text-align: center;}
+.btn{display:inline-flex;border: none; align-items:center;gap:.8rem;padding:.6rem .4rem;border-radius:10px;background:transparent;color:var(--text);cursor:pointer;text-decoration:none;}
+.btn.primary{background:var(--accent);color:#fff;box-shadow:var(--e1);padding:.5rem .75rem;font-size:.8rem; margin-left: 8px;}
+.btn.ghost{border:1px solid ;padding:.4rem .6rem;font-size:.8rem;gap: .4rem;}
+.ghost:hover{background:var(--accent);color:#fff;box-shadow:var(--e1);border: none;}
+
 .btn.icon-btn{font-size:1rem;padding:.45rem}
+.btn:focus{outline:none;box-shadow:var(--focus)}
+.btn:hover{box-shadow:var(--e2)}
+
+
 
 /* Container */
 .container{
@@ -149,7 +155,7 @@ html.dark .fa-sun {
 .hero-title {
   font-size: 2.8rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   color: #222;
 }
 
@@ -160,24 +166,10 @@ html.dark .fa-sun {
 .hero-subtitle {
   font-size: 1.2rem;
   color: #555;
-  margin-bottom: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.social-icons a {
-  font-size: 1.4rem;
-  color: #000;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #1976d2;
-}
 
 .hero-profile {
   position: absolute;
@@ -192,7 +184,7 @@ html.dark .fa-sun {
   object-fit: cover;
   object-position: top;
   width: 100%;
-  height: 300px;
+  height: 340px;
   margin-top: 0;
   display: block;
    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0));
@@ -207,6 +199,9 @@ html.dark .fa-sun {
     justify-content: center;
     margin-top: -65px;
     gap: 0rem;
+  }
+  .hero-profile .profile-image {
+    height: 300px;
   }
   .hero-content {
     flex-direction: column-reverse;
@@ -639,11 +634,36 @@ html.dark .card, html.dark .project-card{
 
 
 /* Contact form */
-.contact{
+.contact-card{
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  justify-content: space-between;
 }
+
+
+
+.social-icons {
+  margin-top: 9px;
+  display: flex;
+  justify-content: center;
+  gap: 1.9rem;
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  color: #000;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1976d2;
+}
+.social-icons a:focus {
+  outline: none;
+  box-shadow: var(--focus);
+  border-radius: 8px;
+}
+
+
 .contact-card{padding:1rem;border-radius:12px}
 .contact-form label{display:block;margin:.5rem 0}
 .contact-form .label{display:block;margin-bottom:.25rem;font-weight:600}
@@ -651,14 +671,20 @@ html.dark .card, html.dark .project-card{
 .contact-form textarea{
   width:100%;padding:.6rem .75rem;border-radius:8px;border:1px solid rgba(0,0,0,0.08);background:transparent;color:var(--text)
 }
+html.dark .contact-form input,
+html.dark .contact-form textarea{border:1px solid rgba(255,255,255,0.1);color:var(--text)}
+.contact-form textarea{min-height:100px;resize:vertical}
+
 .contact-form input:focus,
 .contact-form textarea:focus{outline:none;box-shadow:var(--focus)}
 .form-actions{display:flex;gap:.5rem;margin-top:.6rem}
 .form-status{margin-top:.5rem;color:var(--muted)}
 
 @media (min-width:767px){
+  .contact-container{flex-direction: column; gap:1rem;}
   .contact{flex-direction:row;width: 100%;}
   .about-me{width: 100%;}
+
 }
 
 

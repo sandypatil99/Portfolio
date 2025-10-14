@@ -5,7 +5,7 @@
   --surface: #ffffff;
   --text: #1f2937;
   --muted: #6b7280;
-  --accent: #1976d2; /* blue-700 */
+  --accent:#4285F4; /* blue-700  var(--accent)*/
   --e1: 0 1px 3px rgba(15,23,42,0.06);
   --e2: 0 6px 18px rgba(15,23,42,0.12);
   --radius: 12px;
@@ -38,7 +38,7 @@ html.dark{
   --surface: #0f1724;
   --text: #e6eef8;
   --muted: #9aa7bf;
-  --accent: #1976d2; /* blue-700 */
+  --accent: #4285F4; /* blue-700 */
   --e1: 0 1px 3px rgba(2,6,23,0.6);
   --e2: 0 8px 30px rgba(2,6,23,0.6);
 }
@@ -113,8 +113,8 @@ html.dark .fa-sun {
 .controls{display:flex;gap:.5rem;text-align: center;}
 .btn{display:inline-flex;border: none; align-items:center;gap:.8rem;padding:.6rem .4rem;border-radius:10px;background:transparent;color:var(--text);cursor:pointer;text-decoration:none;}
 .btn.primary{background:var(--accent);color:#fff;box-shadow:var(--e1);padding:.5rem .75rem;font-size:.8rem; margin-left: 8px;}
-.btn.ghost{border:1px solid ;padding:.4rem .6rem;font-size:.8rem;gap: .4rem;}
-.ghost:hover{background:var(--accent);color:#fff;box-shadow:var(--e1);border: none;}
+.btn.ghost{border:1px solid #007bff;padding:.4rem .6rem;font-size:.8rem;gap: .4rem;}
+.ghost:hover{border:1px solid #007bff;background:var(--accent);color:#fff;box-shadow:var(--e1);}
 
 .btn.icon-btn{font-size:1rem;padding:.45rem}
 .btn:focus{outline:none;box-shadow:var(--focus)}
@@ -160,7 +160,7 @@ html.dark .fa-sun {
 }
 
 .highlight {
-  color: #1976d2; /* Google blue */
+  color: var(--accent); /* Google blue */
 }
 
 .hero-subtitle {
@@ -219,7 +219,7 @@ html.dark .hero-title {
 }
 
 html.dark .highlight {
-  color: #1976d2; /* lighter google blue for dark mode */
+  color: var(--accent); /* lighter google blue for dark mode */
 }
 
 html.dark .hero-subtitle {
@@ -230,7 +230,7 @@ html.dark .social-icons a {
   color: #f5f5f5;
 }
 html.dark .social-icons a:hover {
-  color: #1976d2; /* lighter blue for dark mode */
+  color: var(--accent); /* lighter blue for dark mode */
 }
 
 
@@ -293,7 +293,7 @@ html.dark .social-icons a:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 4px;
-  background-color: #1976d2;
+  background-color: var(--accent);
 }
 
 /* Timeline items */
@@ -333,7 +333,7 @@ html.dark .social-icons a:hover {
   top: 20px;
   width: 20px;
   height: 20px;
-  background-color: #1976d2;
+  background-color: var(--accent);
   border-radius: 50%;
   z-index: 1;
 }
@@ -351,7 +351,7 @@ html.dark .social-icons a:hover {
 .timeline-content h3 {
   margin: 0 0 6px;
   font-size: 1.2rem;
-  color: #1976d2;
+  color: var(--accent);
 }
 
 .company {
@@ -386,7 +386,7 @@ html.dark .experience-section {
 
 /* Center vertical line */
 html.dark .timeline::before {
-  background-color: #1976d2; /* lighter blue for visibility */
+  background-color: var(--accent); /* lighter blue for visibility */
 }
 
 /* Content card */
@@ -396,7 +396,7 @@ html.dark .timeline-content {
 }
 
 html.dark .timeline-content h3 {
-  color: #1976d2;
+  color: var(--accent);
 }
 
 html.dark .company {
@@ -414,7 +414,7 @@ html.dark .desc {
 /* Timeline dots */
 html.dark .timeline-item.left .timeline-content::after,
 html.dark .timeline-item.right .timeline-content::after {
-  background-color: #1976d2;
+  background-color: var(--accent);
 }
 
 
@@ -445,7 +445,7 @@ html.dark .timeline-item.right .timeline-content::after {
 
 .skills-section {
   max-width: 1000px;
-  margin: 80px auto;
+  margin: 0px auto;
   padding: 20px;
   text-align: center;
   font-family: Arial, sans-serif;
@@ -552,27 +552,29 @@ html.dark .skill-item:hover .skill-icon {
     /* Tab navigation */
     .tab-nav {
       display: flex;
+      justify-content: center;
+      text-align: end;
     }
 
-    .tab-nav button {
+    .tab-nav a {
       justify-items: space-between;
       background: none;
-      border: none;
       padding: 10px 20px;
       cursor: pointer;
       font-size: 16px;
-      border-bottom: 1px solid #ccc;
       color: var(--text);
+      text-align: center;
+      border: none;
+      border-bottom: 2px solid transparent;
     }
-    .tab-nav button.active {
-      border: 1px solid #ccc;
-      border-radius: 7px 7px 0 0;
-      border-bottom: none;
-      font-weight: bold;
+    .tab-nav a.active {
+      border-bottom: 2px solid var(--accent);
+      font-weight: 400;
       color: var(--accent);
+
     }
 
-    .html.dark .tab-nav button{
+    .html.dark .tab-nav a{
       color: var(--surface);
     }
 
@@ -655,7 +657,7 @@ html.dark .card, html.dark .project-card{
 }
 
 .social-icons a:hover {
-  color: #1976d2;
+  color: var(--accent);
 }
 .social-icons a:focus {
   outline: none;

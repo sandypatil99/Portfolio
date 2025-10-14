@@ -552,21 +552,22 @@ html.dark .skill-item:hover .skill-icon {
     /* Tab navigation */
     .tab-nav {
       display: flex;
-      justify-content: center;
-      text-align: end;
+      justify-content: center; 
+
     }
 
-    .tab-nav a {
-      justify-items: space-between;
-      background: none;
+    .tab-nav a {      
+      height: 15vh;
       padding: 10px 20px;
       cursor: pointer;
       font-size: 16px;
-      color: var(--text);
       text-align: center;
+      align-content: center;
+      color: var(--text);
       border: none;
       border-bottom: 2px solid transparent;
     }
+
     .tab-nav a.active {
       border-bottom: 2px solid var(--accent);
       font-weight: 400;
@@ -587,10 +588,10 @@ html.dark .skill-item:hover .skill-icon {
       display: block;
     }
 
-    .tab-pane {
-      border-top: none;
+      .tab-pane {
       padding-top: 40px;
     }
+
 
 
 

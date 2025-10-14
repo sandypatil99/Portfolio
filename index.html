@@ -422,8 +422,8 @@
 
   <!-- Floating action button (material) -->
    <div class="like">
-   <a href="#like" class="mailto love-my-work" aria-label="like"><img src="/assets/images/imgi_39_heart.BsN-EPlA.svg" alt=""></a>
-   <!-- <span class="heart-count">1.2K</span> -->
+    <div id="heart" class="heart"><a href="#like" class=" love-my-work" aria-label="like"><img src="/assets/images/imgi_39_heart.BsN-EPlA.svg" alt=""></a></div>
+    <div class="heart-count">124<span id="likeCount" class="like-count">0</span></div>
    </div>
 
   <!-- Footer -->
@@ -449,5 +449,67 @@
 
   <!-- Scripts -->
   <script src="assets/js/main.js" defer></script>
+
+  <script>
+  const heart = document.getElementById('heart');
+  const likeCount = document.getElementById('likeCount');
+  let liked = false;
+  let count = 0;
+
+  // Function to create multiple floating hearts
+  function createFloatingHearts() {
+    const heartSizes = [20, 35, 50, 80, 100]; // small → big
+    const numberOfHearts = 7; // number of hearts per click
+
+    for (let i = 0; i < numberOfHearts; i++) {
+      const floatHeart = document.createElement('div');
+      floatHeart.classList.add('floating-heart');
+      floatHeart.innerHTML = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+       fill="#CD8DE0" width="40" height="40">
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+             2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+             C13.09 3.81 14.76 3 16.5 3
+             19.58 3 22 5.42 22 8.5
+             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+  </svg>`;
+
+
+
+      // random position and size
+      const size = heartSizes[Math.floor(Math.random() * heartSizes.length)];
+      const randomLeft = 40 + Math.random() * 20; // % position near center
+      const randomDelay = Math.random() * 0.4;
+
+      floatHeart.style.left = randomLeft + 'vw';
+      floatHeart.style.bottom = '50px';
+      floatHeart.style.fontSize = size + 'px';
+      floatHeart.style.animationDelay = randomDelay + 's';
+
+      // Add small random horizontal movement
+      floatHeart.animate([
+        { transform: `translateX(0px) translateY(0px)`, opacity: 1 },
+        { transform: `translateX(${Math.random() * 100 - 50}px) translateY(-200px)`, opacity: 0 }
+      ], {
+        duration: 1200 + Math.random() * 500,
+        easing: 'ease-out',
+        fill: 'forwards'
+      });
+
+      document.body.appendChild(floatHeart);
+      setTimeout(() => floatHeart.remove(), 1600);
+    }
+  }
+
+  heart.addEventListener('click', () => {
+    liked = !liked;
+    heart.classList.toggle('liked');
+    count += liked ? 1 : -1;
+    likeCount.textContent = count;
+
+    // Create multiple animated hearts
+    createFloatingHearts();
+  });
+</script>
 </body>
 </html>

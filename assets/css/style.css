@@ -709,16 +709,50 @@ html.dark .contact-form textarea{border:1px solid rgba(255,255,255,0.1);color:va
 .love-my-work img {
   width: 60px;
   height: auto;
-}
+} 
+
 .heart-count {
-  margin-top: 0.2rem;
   font-size: 0.775rem;
   color: var(--text);
   text-align: center;
 }
 
+.heart {
+    color: gray;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    user-select: none;
+  }
 
+  .heart.liked {
+    color: #CD8DE0;
+  }
 
+  .like-count {
+    color: var(--text);
+  }
+
+  /* Floating heart base */
+  .floating-heart {
+    position: fixed;
+    color: #CD8DE0;
+    animation: floatUp 1.5s ease-out forwards;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  @keyframes floatUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-200px) scale(1.4);
+    }
+    
+  
+  }
 
 /* Footer */
 .site-footer{padding:1.25rem 0;background:transparent;text-align:center;color:var(--muted);border-top:1px solid rgba(0,0,0,0.04)}

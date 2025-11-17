@@ -180,7 +180,7 @@ html.dark .fa-sun {
   right: 4rem;
   z-index: 2;
   border-radius: 20px;
-  filter: drop-shadow(-12px 1px 1px rgba(0,0,0,0.5));
+  filter: drop-shadow(-4px 1px 1px rgba(0,0,0,0.5));
 }
 
 .hero-profile .profile-image {
@@ -190,8 +190,6 @@ html.dark .fa-sun {
   height: 340px;
   margin-top: 0;
   display: block;
-   mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0));
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 98%, rgba(0,0,0,0));
 }
 
 /* Responsive: stack image above content */

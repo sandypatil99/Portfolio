@@ -378,7 +378,7 @@ compatibility</p>
     <div class="timeline-item left">
       <div class="timeline-content">
         <h3>Self Employed</h3>
-        <p class="company">Build Project, WordPress Training & Professional Network</p>
+        <p class="company">Build Project & WordPress Training</p>
         <p class="period">Sept 2025 – Present</p>
         <p class="desc">
           Engaged in an intensive WordPress training program covering theme and plugin development, customization, and best practices for building dynamic websites.
@@ -453,25 +453,30 @@ compatibility</p>
 <div>
 <p>If you'd like to work together or have a question, email me or use the quick message below.</p>
 <form id="contactForm" class="contact-form" action="https://formspree.io/f/xnqzjvjd" method="post" novalidate>
-<label>
-<span class="label">Name</span>
-<input type="text" name="name" placeholder="Your Name" required aria-required="true" autocomplete="name" />
-</label>
-<label>
-<span class="label">Email</span>
-<input type="email" name="email" placeholder="Your Email" required aria-required="true" autocomplete="email" />
-</label>
+  <label>
+    <span class="label">Name</span>
+    <input type="text" name="name" placeholder="Your Name" required aria-required="true" autocomplete="name" />
+  </label>
 
-<label>
-<span class="label">Message</span>
-<textarea name="message" rows="4" placeholder="Write Your Message Here..." required aria-required="true"></textarea>
-</label>
+  <label>
+    <span class="label">Email</span>
+    <input type="email" name="email" placeholder="Your Email" required aria-required="true" autocomplete="email" />
+  </label>
 
-<div class="form-actions">
-<button type="submit" class="btn primary">Send message</button>
-</div>
+  <label>
+    <span class="label">Subject</span>
+    <input type="text" name="subject" placeholder="Subject" required aria-required="true" autocomplete="off" />
+  </label>
 
-<p id="formStatus" role="status" aria-live="polite" class="form-status" hidden></p>
+  <label>
+    <span class="label">Message</span>
+    <textarea name="message" id="message" placeholder="Write your message here..." required aria-required="true" rows="6"></textarea>
+  </label>
+
+  <div class="form-actions">
+    <button type="submit" class="btn primary">Send message</button>
+  </div>
+  <p id="formStatus" role="status" aria-live="polite" class="form-status" hidden></p>
 </form>
 
 
@@ -580,6 +585,31 @@ document.querySelector('.hero').onmousemove = (e) => {
     // Create multiple animated hearts
     createFloatingHearts();
   });
+</script>
+<script>
+  (function() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    form.addEventListener('input', (e) => {
+      const target = e.target;
+      if (!target) return;
+      if (target.name === 'message') {
+        // Convert NBSPs to regular spaces
+        const cleaned = target.value.replace(/\u00A0/g, ' ');
+        if (cleaned !== target.value) target.value = cleaned;
+      }
+    });
+
+    // Prevent any script from trimming spaces on blur (optional)
+    const messageEl = form.querySelector('[name="message"]');
+    if(messageEl) {
+      messageEl.addEventListener('blur', (ev) => {
+        // Do not trim; keep user spaces as is.
+        // If you previously had a trim on blur, remove it.
+      });
+    }
+  })();
 </script>
 </body>
 </html>

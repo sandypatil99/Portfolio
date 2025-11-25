@@ -60,8 +60,8 @@
     <div class="header-inner">
       <h1 class="brand" aria-label="Sandesh Patil — Web Developer | WordPress Developer | UI Developer">SP</h1>
       <div class="controls">
-        <button id="contrastToggle" class="btn icon-btn" aria-pressed="false" aria-label="Toggle dark mode"><i class="fas fa-moon"></i> <i class="fas fa-sun"></i></button>
         <button class="btn icon-btn"><a class="btn ghost" href="#contact">Hire Me <i class="fas fa-handshake"></i></a></button>
+        <button id="contrastToggle" class="btn icon-btn" aria-pressed="false" aria-label="Toggle dark mode"><i class="fas fa-moon"></i> <i class="fas fa-sun"></i></button>
       </div>
     </div>
   </header>
@@ -377,7 +377,7 @@ compatibility</p>
     <!-- First Company (Left) -->
     <div class="timeline-item left">
       <div class="timeline-content">
-        <h3>Self Employed</h3>
+        <h3>Self</h3>
         <p class="company">Build Project & WordPress Training</p>
         <p class="period">Sept 2025 – Present</p>
         <p class="desc">
@@ -392,7 +392,7 @@ compatibility</p>
         <h3>Web Developer Intern</h3>
         <p class="company">Amura Marketing Technology, Pune</p>
         <p class="period">March 2025 – August 2025</p>        <p class="desc">
-          Contributed to designing and developing clean, user-friendly web pages while maintaining high standards of responsiveness and UI quality. Gained hands-on experience working on live client projects and improving overall website structure and performance.
+          Contributed to designing and developing clean, user-friendly WordPress website, landing-page pages while maintaining high standards of responsiveness and UI quality. Gained hands-on experience working on live client projects and improving overall website structure and performance.
         </p>
       </div>
     </div>
@@ -445,50 +445,34 @@ compatibility</p>
       </div>
 </section>
 
+
 <!-- Contact -->
 <section id="contact" class="contact" aria-labelledby="contact-title">
-<h2 class="section-title">Contact Me</h2>
+  <h2 class="section-title">Contact Me</h2>
 
-<div class="contact-card elevation-3 card " role="region" aria-labelledby="contact-title">
-<div>
-<p>If you'd like to work together or have a question, email me or use the quick message below.</p>
-<form id="contactForm" class="contact-form" action="https://formspree.io/f/xnqzjvjd" method="post" novalidate>
-  <label>
-    <span class="label">Name</span>
-    <input type="text" name="name" placeholder="Your Name" required aria-required="true" autocomplete="name" />
-  </label>
+  <div class="contact-card">
+    <div>
+      <p>If you'd like to work together or have a question, email me or use the quick message below.</p>
 
-  <label>
-    <span class="label">Email</span>
-    <input type="email" name="email" placeholder="Your Email" required aria-required="true" autocomplete="email" />
-  </label>
+      <form id="form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="ab42544d-bd6b-4612-b617-facc62299b2b">
+        <input type="text" name="name" required placeholder="Your name">
+        <input type="email" name="email" required placeholder="Your email">
+        <textarea name="message" required placeholder="Write your message here..."></textarea>
+        <button class="btn ghost" type="submit">Submit</button>
+      </form>
 
-  <label>
-    <span class="label">Subject</span>
-    <input type="text" name="subject" placeholder="Subject" required aria-required="true" autocomplete="off" />
-  </label>
-
-  <label>
-    <span class="label">Message</span>
-    <textarea name="message" id="message" placeholder="Write your message here..." required aria-required="true" rows="6"></textarea>
-  </label>
-
-  <div class="form-actions">
-    <button type="submit" class="btn primary">Send message</button>
+    </div>
   </div>
-  <p id="formStatus" role="status" aria-live="polite" class="form-status" hidden></p>
-</form>
 
-
-</div>
-</div>
 </section>
+
 </main>
 
   <!-- Floating action button (material) -->
    <div class="like">
     <div id="heart" class="heart"><a href="#like" class=" love-my-work" aria-label="like"><img src="/assets/images/imgi_39_heart.BsN-EPlA.svg" alt=""></a></div>
-    <div class="heart-count">26<span id="likeCount" class="like-count">0</span></div>
+    <div class="heart-count"><span id="likeCount" class="like-count"></span></div>
    </div>
 
   <!-- Footer -->
@@ -577,39 +561,15 @@ document.querySelector('.hero').onmousemove = (e) => {
   }
 
   heart.addEventListener('click', () => {
-    liked = !liked;
-    heart.classList.toggle('liked');
-    count += liked ? 1 : -1;
-    likeCount.textContent = count;
+    // liked = !liked;
+    // heart.classList.toggle('liked');
+    // count += liked ? 1 : -1;
+    // likeCount.textContent = count;
 
     // Create multiple animated hearts
     createFloatingHearts();
   });
 </script>
-<script>
-  (function() {
-    const form = document.getElementById('contactForm');
-    if (!form) return;
 
-    form.addEventListener('input', (e) => {
-      const target = e.target;
-      if (!target) return;
-      if (target.name === 'message') {
-        // Convert NBSPs to regular spaces
-        const cleaned = target.value.replace(/\u00A0/g, ' ');
-        if (cleaned !== target.value) target.value = cleaned;
-      }
-    });
-
-    // Prevent any script from trimming spaces on blur (optional)
-    const messageEl = form.querySelector('[name="message"]');
-    if(messageEl) {
-      messageEl.addEventListener('blur', (ev) => {
-        // Do not trim; keep user spaces as is.
-        // If you previously had a trim on blur, remove it.
-      });
-    }
-  })();
-</script>
 </body>
 </html>

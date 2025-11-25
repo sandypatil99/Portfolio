@@ -672,44 +672,88 @@ html.dark .card, html.dark .project-card{
 }
 
 
-.contact-card{padding:1rem;border-radius:12px}
+/* Contact Card */
+.contact-card {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.04);
+  background: var(--surface);
+  box-shadow: var(--e1);
+  max-width: 600px;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* Labels */
 .contact-form label {
   display: block;
   margin: 0.5rem 0;
 }
 
+/* Inputs & Textareas */
+.contact-card form.contact-form input[type="text"],
+.contact-card form.contact-form input[type="email"],
+.contact-card form.contact-form textarea,
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
+  display: block;
   width: 100%;
+  box-sizing: border-box;
+
+
   padding: 0.6rem 0.75rem;
+  margin: 0.5rem 0 1rem 0;
+
   border-radius: 8px;
   border: 1px solid rgba(0,0,0,0.08);
-  box-sizing: border-box;
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
+  background: var(--surface, #fff);
+
   font-family: inherit;
-  color: var(--text);
-  background-color: var(--surface);
+  font-size: 1rem;
+  color: var(--text, #111);
+
+  /* SPACING FIX – ensure normal word spacing */
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  letter-spacing: normal;
+  word-spacing: normal;
+
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
 }
 
+/* Textarea Styling */
 .contact-form textarea {
   min-height: 140px;
   resize: vertical;
-  white-space: pre-wrap; /* preserve user spaces and line breaks */
-  word-wrap: break-word;
-  overflow-wrap: anywhere;
-  width: 100%;
-  padding: 0.6rem 0.75rem;
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-sizing: border-box;
-  font-family: inherit;
-  color: var(--text);
-  background-color: var(--surface);
+  line-height: 1.5;
+  overflow-y: auto;
 }
+
+/* Placeholder Styling */
+.contact-form ::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+/* Mobile selection fix */
+.contact-form input,
+.contact-form textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+}
+
+
+
+
 
 /* Floating action button */
 .like {

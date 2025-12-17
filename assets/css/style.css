@@ -1,16 +1,16 @@
 /* Material-inspired, responsive, accessible CSS */
 /* --- Reset-ish --- */
 :root{
-  --bg: #fafafa;
-  --surface: #ffffff;
+  --bg: #d8d5d5;
+  --surface: #ffffff71;
   --text: #1f2937;
   --muted: #6b7280;
-  --accent:#4285F4; /* blue-700  var(--accent)*/
+  --accent:#4286f4; /* blue-700  var(--accent)*/
   --e1: 0 1px 3px rgba(15,23,42,0.06);
   --e2: 0 6px 18px rgba(15,23,42,0.12);
   --radius: 12px;
   --max-width: 1100px;
-  --focus: 3px solid rgba(29,78,216,0.18);
+  --focus: 3px solid rgba(29, 79, 216, 0.025);
 }
 
 *{
@@ -34,8 +34,8 @@ body{
 
 /* Dark mode via .dark on html */
 html.dark{
-  --bg: #0b1220;
-  --surface: #0f1724;
+  --bg: #000000;
+  --surface: #201f1fa0;
   --text: #e6eef8;
   --muted: #9aa7bf;
   --accent: #4285F4; /* blue-700 */
@@ -90,18 +90,20 @@ html.dark{
   color:var(--accent);
   cursor: pointer;
   font-weight: 700;
-  
-
 }
-.brand:hover{
+
+
+.brand:hover
+{
   text-decoration:underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
   text-decoration-color: var(--accent);
 }
 
-
-
+.fa-moon{
+  display:inline
+}
 .fa-sun{
   display:none
 }
@@ -140,7 +142,6 @@ html.dark .fa-sun {
   text-align: center;
   padding: 0rem;
   border-radius: 16px;
-
   border: 2px solid transparent;
 	background: linear-gradient(#000, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
 }
@@ -149,7 +150,7 @@ html.dark .fa-sun {
   position: relative;
   display: flex;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   align-items: center;
   border-radius: 16px;
@@ -166,7 +167,9 @@ html.dark .fa-sun {
 }
 
 .highlight {
-  color: var(--accent); /* Google blue */
+  color: var(--accent);
+  font-style: italic;
+
 }
 
 .hero-subtitle {

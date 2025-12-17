@@ -11,6 +11,7 @@ html.dark .section-title {
   color: #f5f5f5;
 }
 
-
-/* Cards */
+.text-center {
+  text-align: center;
+} 
 

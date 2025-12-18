@@ -2,7 +2,7 @@
 /* --- Reset-ish --- */
 :root{
   --bg: #d8d5d5;
-  --surface: #ffffff71;
+  --surface: #ffffffaf;
   --text: #1f2937;
   --muted: #6b7280;
   --accent:#4286f4; /* blue-700  var(--accent)*/
@@ -323,7 +323,7 @@ html.dark .social-icons a:hover {
 
 /* Content card */
 .timeline-content {
-  background: #fff;
+  background: var(--surface);
   padding: 20px;
   border-radius: 8px;
   position: relative;
@@ -553,53 +553,6 @@ html.dark .skill-item:hover .skill-icon {
 .elevation-1{box-shadow:var(--e1)}
 .elevation-2{box-shadow:var(--e2)}
 .elevation-3{box-shadow:0 12px 40px rgba(2,6,23,0.06)}
-
-
-    /* Tab navigation */
-    .tab-nav {
-      display: flex;
-      justify-content: center; 
-
-    }
-
-    .tab-nav a {      
-      height: 15vh;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 16px;
-      text-align: center;
-      align-content: center;
-      color: var(--text);
-      border: none;
-      border-bottom: 2px solid transparent;
-    }
-
-    .tab-nav a.active {
-      border-bottom: 2px solid var(--accent);
-      font-weight: 400;
-      color: var(--accent);
-
-    }
-
-    .html.dark .tab-nav a{
-      color: var(--surface);
-    }
-
-    /* Tab content */
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-      .tab-pane {
-      padding-top: 40px;
-    }
-
-
-
 
 
 

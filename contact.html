@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Sandesh Patil</title>
+
+  <meta name="description" content="Contact Sandesh Patil for website development, WordPress, portfolio websites and freelancing work." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="canonical" href="https://sandeshpatil.in/contact.html">
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- HEADER -->
+<header class="border-b">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-xl font-bold">Sandesh Patil</h1>
+    <nav class="space-x-6 text-sm">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<!-- CONTACT SECTION -->
+<main class="max-w-6xl mx-auto px-4 py-16">
+
+  <h1 class="text-3xl font-bold mb-4">Contact Me</h1>
+  <p class="text-gray-600 mb-10 max-w-2xl">
+    Have a project in mind or need a website?  
+    Fill out the form or contact me directly on WhatsApp.
+  </p>
+
+  <div class="grid md:grid-cols-2 gap-12">
+
+    <!-- FORM -->
+    <form name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="space-y-5 border rounded-lg p-6">
+
+      <!-- Required hidden field -->
+      <input type="hidden" name="form-name" value="contact">
+
+      <!-- Anti-spam -->
+      <p class="hidden">
+        <label>Don’t fill this out: <input name="bot-field"></label>
+      </p>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Your Name</label>
+        <input type="text" name="name" required
+               class="w-full border rounded px-3 py-2">
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Email Address</label>
+        <input type="email" name="email" required
+               class="w-full border rounded px-3 py-2">
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Message</label>
+        <textarea name="message" rows="4" required
+                  class="w-full border rounded px-3 py-2"></textarea>
+      </div>
+
+      <button type="submit"
+              class="bg-blue-600 text-white px-6 py-3 rounded-lg">
+        Send Message
+      </button>
+
+    </form>
+
+    <!-- DIRECT CONTACT -->
+    <div class="space-y-6">
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Direct Contact</h2>
+        <p>Email: <strong>sandeshpatil38446@gmail.com</strong></p>
+        <p>Location: Pune, India</p>
+      </div>
+
+      <a href="https://wa.me/918329608258"
+         class="inline-block bg-green-500 text-white px-6 py-3 rounded-lg">
+        Chat on WhatsApp
+      </a>
+
+      <p class="text-sm text-gray-600">
+        I usually reply within 24 hours.
+      </p>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t py-6 text-center text-sm">
+  © 2026 Sandesh Patil
+</footer>
+
+</body>
+</html>

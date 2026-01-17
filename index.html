@@ -1,266 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Required meta -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sandesh Patil — Web Developer | WordPress Developer | UI Developer | Portfolio</title>
-  <meta name="description" content="Sandesh Patil — Web Developer. Portfolio showcasing responsive, accessible, and SEO-friendly projects built with modern HTML, CSS and JavaScript." />
-  <meta name="keywords" content="Sandesh Patil, Web Developer, portfolio, HTML, CSS, JavaScript, accessible web" />
-  <meta name="author" content="Sandesh Patil" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Sandesh Patil — Web Developer | WordPress Developer | UI Developer | Portfolio" />
-  <meta property="og:description" content="Responsive, accessible portfolio with material design aesthetics." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_US" />
+  <title>Sandesh Patil – Frontend & WordPress Developer</title>
+  <meta name="description" content="Frontend & WordPress Developer building fast, SEO-friendly websites. Hire me for portfolio, business & WordPress websites." />
 
-  <!-- Canonical (update to your domain after deploy) -->
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- SEO -->
   <link rel="canonical" href="https://sandeshpatil.in/" />
-
-  <!-- Basic favicons (replace with your icons) -->
-  <link rel="icon" href="assets/images/profile.png" />
-
-  <!-- Structured data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sandesh Patil",
-    "url": "https://sandeshpatil.in/",
-    "sameAs": [],
-    "jobTitle": "Web Developer | WordPress Developer | UI Developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Independent"
-    }
-  }
-  </script>
-
-  <!-- Font Awesome CDN for icons -->
-<script src="https://kit.fontawesome.com/35d63201bc.js" crossorigin="anonymous"></script>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet"  href="assets/css/utilies.css">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YHC97Z2B3Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-YHC97Z2B3Z');
-</script>
+<body class="bg-white text-gray-800">
 
-<body>
-  <!-- Top controls (no navbar) -->
-  <header class="site-header" role="banner">
-    <div class="header-inner">
-      <h1 class="brand" aria-label="Sandesh Patil — Web Developer">SP</h1>
-      <div class="controls">
-        <button class="btn icon-btn"><a class="btn ghost" href="#contact">Contact Me <i class="fas fa-envelope"></i></a></button>
-        <button id="contrastToggle" class="btn icon-btn" aria-pressed="false" aria-label="Toggle dark mode"><i class="fas fa-moon"></i> <i class="fas fa-sun"></i></button>
-      </div>
-    </div>
-  </header>
+<!-- HEADER -->
+<header class="border-b">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-xl font-bold">Sandesh Patil</h1>
+    <nav class="space-x-6 text-sm">
+      <a href="services.html" class="hover:text-blue-600">Services</a>
+      <a href="blog.html" class="hover:text-blue-600">Blog</a>
+      <a href="contact.html" class="hover:text-blue-600">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Main content -->
-  <main id="main" class="container" role="main">
+<!-- HERO -->
+<section class="max-w-6xl mx-auto px-4 py-20">
+  <h2 class="text-4xl font-bold mb-4">
+    Frontend & WordPress Developer
+  </h2>
+  <p class="text-lg max-w-2xl mb-6">
+    I help businesses and individuals build fast, SEO-friendly websites that convert visitors into customers.
+  </p>
 
-    <!-- HERO SECTION -->
-<section class="hero" role="banner">
-<div class="hero-content">
- <div>
-    <h1 class="hero-title">Hi, I’m <span class="highlight">Sandesh Patil</span></h1>
-    <p class="hero-subtitle">Web Developer</p>
-    <div class="btn-group " role="region" aria-label="Primary actions">
-      <a class="btn ghost" href="assets/resume file/sandesh_resume.pdf" download>My Resume <i class="fas fa-download"></i></a>
-      <a class="btn ghost" href="#contact">Contact Me <i class="fas fa-envelope"></i></a>
-    </div>
-    <!-- Social Icons -->
-    <div class="social-icons " role="region" aria-label="Social media links">
-      <a href="https://linkedin.com/in/sandeshjspatil" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/sandypatil99" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://x.com/Sandeshpatil_in" target="_blank" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
- </div>
-
- </div>
+  <div class="flex gap-4">
+    <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg">
+      Hire Me
+    </a>
+    <a href="https://wa.me/918329608258" class="border px-6 py-3 rounded-lg">
+      WhatsApp
+    </a>
+  </div>
 </section>
 
-<div><img class="line-img"  src="/assets/images/verticle-three-line.svg" alt=""></div>
+<!-- SERVICES -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-8">Services</h2>
 
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="font-semibold mb-2">Portfolio Websites</h3>
+        <p>Clean & professional portfolios for developers and freelancers.</p>
+      </div>
 
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="font-semibold mb-2">WordPress Websites</h3>
+        <p>Business websites, blogs, booking & CMS solutions.</p>
+      </div>
 
-<!-- Skills -->
-<section id="skills" class="skills-section">
-  <h2 class="section-title">Tech Stack</h2>
-
-  <div class="skills-container">
-    <div class="skill-item">
-      <i class="fab fa-html5 skill-icon"></i>
-      <span>HTML5</span>
-    </div>
-    <div class="skill-item">
-      <i class="fab fa-css3-alt skill-icon"></i>
-      <span>CSS3</span>
-    </div>
-    <div class="skill-item">
-      <i class="fab fa-js-square skill-icon"></i>
-      <span>JavaScript</span>
-    </div>
-    <div class="skill-item">
-      <i class="fab fa-react skill-icon"></i>
-      <span>React</span>
-    </div>
-    <div class="skill-item">
-      <i class="fab fa-bootstrap skill-icon"></i>
-      <span>Bootstrap</span>
-    </div>
-    <div class="skill-item">
-      <i class="fab fa-php skill-icon"></i>
-      <span>PHP</span>
-    </div>
-    <div class="skill-item">
-      <i class="fas fa-database skill-icon"></i>
-      <span>MySQL</span>
-    </div>
-    <div class="skill-item">
-      <i class="fab fa-wordpress-simple skill-icon"></i>
-      <span>WordPress</span>
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="font-semibold mb-2">Website Redesign</h3>
+        <p>Improve speed, UI/UX, SEO & conversions.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="portfolio" class="projects" aria-labelledby="projects-title">
-  <h3 id="projects-title" class="section-title">My Portfolio</h3>
-
-  <div class="grid project-grid">
-    <article class="project-card elevation-1" tabindex="0" aria-labelledby="p1-title">
-      <img class="project-thumb" src="assets/images/MovieDB - Web Panel.png" alt="screenshot: MovieDB - Web Panel">
-      <div class="project-body">
-        <h4 id="p1-title">MovieDB - Web Panel</h4>
-        <p class="meta">React • Tailwind CSS • TMDB API</p>
-        <a class="link" href="https://topmovie-db.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open MovieDB - Web Panel project details">Live demo →</a>
-      </div>
-    </article>
-
-
-    <article class="project-card elevation-1" tabindex="-1" aria-labelledby="p2-title">
-      <img class="project-thumb" src="assets/images/Crib Property Services - Custom Child Theme.png" alt="screenshot: theme plugin">
-      <div class="project-body">
-        <h4 id="p2-title">Custom Child Theme - Crib Property Services</h4>
-        <p class="meta">WordPress • Elementor</p>
-        <a class="link" href="/" target="_blank" aria-label="Open Theme Plugin project details">Local WP Setup</a>
-      </div>
-    </article>
-
-
-    <article class="project-card elevation-1" tabindex="0" aria-labelledby="p1-title">
-      <img class="project-thumb" src="assets/images/hotelshalini.png" alt="screenshot: MovieDB - Web Panel">
-      <div class="project-body">
-        <h4 id="p1-title">Hotel website</h4>
-        <p class="meta">WordPress • WooCommerce Plugin • Custom Plugin • Payment Integration</p>
-        <a class="link" href="https://hotelshalini.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Hotel website project details">Live →</a>
-      </div>
-    </article>
-
-    <article class="project-card elevation-1" tabindex="-1" aria-labelledby="p3-title">
-      <img class="project-thumb" src="assets/images/Usabilityhub.png" alt="screenshot: exercise club management">
-      <div class="project-body">
-        <h4 id="p3-title">UsabilityHub - Landing Page</h4>
-        <p class="meta">HTML • CSS</p>
-        <a class="link" href="https://usabilityhub99.netlify.app/" target="_blank" aria-label="Open UsabilityHub - Landing Page project details">Live demo →</a>
-      </div>
-    </article>
-
-    <article class="project-card elevation-1" tabindex="-1" aria-labelledby="p4-title">
-      <img class="project-thumb" src="assets/images/Valutflow.png" alt="screenshot: Hexanovate">
-      <div class="project-body">
-        <h4 id="p4-title">Valutflow</h4>
-        <p class="meta">HTML • CSS • JavaScript • Bootstrap</p>
-        <a class="link" href="https://valutflow.netlify.app/" target="_blank" aria-label="Open Valutflow project details">Live</a>
-      </div>
-    </article>
-
-
-    <article class="project-card elevation-1" tabindex="-1" aria-labelledby="p5-title">
-      <img class="project-thumb" src="assets/images/Fintech.png" alt="screenshot: finttech web page">
-      <div class="project-body">
-        <h4 id="p5-title">Fintech - Web Page</h4>
-        <p class="meta">HTML • CSS • BootStrap</p>
-        <a class="link" href="/" target="_blank" aria-label="Open Fintech - Web Page project details">Live demo →</a>
-      </div>
-    </article>
-  </div>
+<!-- WHY ME -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-2xl font-bold mb-6">Why Choose Me</h2>
+  <ul class="space-y-2">
+    <li>✔ SEO-optimized & fast websites</li>
+    <li>✔ Mobile-friendly design</li>
+    <li>✔ Clean code & modern UI</li>
+    <li>✔ Affordable pricing</li>
+  </ul>
 </section>
 
-<!-- About Me -->
-<section class="about-me" aria-labelledby="about-me">
-  <h2 class="section-title">About Me</h2>
-  <div class=" text-center elevation-3" role="region" aria-labelledby="about-title">
-      <p>Hello, I am a web development enthusiast with a strong interest in creating websites and digital experiences. I have completed my postgraduate degree in Computer Applications, and after that, I started exploring web technologies with a practical, hands-on approach.</p>
-      <p>I enjoy learning by working on real projects. I have experience with website designing, blogging, SEO, and hands-on work through personal and freelance projects. These experiences helped me understand how web solutions work in the real world.</p>
-      <p>I have a creative mindset and always like to try new ideas. I enjoy improving designs, writing clean code, and building user-friendly websites. I believe continuous learning and curiosity help me grow as a developer.</p>
-      <p>I am passionate about web development and always excited to learn, build, and improve</p>
-  </div>
+<!-- CTA -->
+<section class="bg-blue-600 text-white text-center py-16">
+  <h2 class="text-2xl font-bold mb-4">Ready to Start Your Project?</h2>
+  <a href="contact.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg">
+    Contact Me
+  </a>
 </section>
 
-
-<!-- Contact -->
-<section id="contact" class="contact" aria-labelledby="contact-title">
-  <h2 class="section-title">Contact Me</h2>
-
-  <div class="contact-card">
-    <div>
-      <p>If you'd like to work together or have a question, email me or use the quick message below.</p>
-
-      <form id="form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="ab42544d-bd6b-4612-b617-facc62299b2b">
-        <input type="text" name="name" required placeholder="Your name">
-        <input type="email" name="email" required placeholder="Your email">
-        <textarea name="message" required placeholder="Write your message here..."></textarea>
-        <button class="btn ghost" type="submit">Submit</button>
-      </form>
-
-    </div>
+<!-- FOOTER -->
+<footer class="border-t py-6 text-center text-sm">
+  <p>© 2026 Sandesh Patil</p>
+  <div class="space-x-4">
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
   </div>
+</footer>
 
-</section>
-
-</main>
-
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
-    <!-- Social Icons -->
-    <div class="social-icons " role="region" aria-label="Social media links">
-      <a href="https://linkedin.com/in/sandeshjspatil" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/sandypatil99" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://x.com/SandeshPat54955" target="_blank" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
-
-    <div class="footer-inner">
-      <p>&copy; <span id="year"></span> Sandesh Patil.</p>
-      <p class="small"></p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

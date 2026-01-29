@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://sandeshpatil.in/sitemap.xml

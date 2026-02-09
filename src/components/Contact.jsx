@@ -3,6 +3,26 @@ import { motion } from 'framer-motion';
 import { Mail, MessageSquare, Send, Phone } from 'lucide-react';
 
 const Contact = () => {
+    const [formState, setFormState] = React.useState({ name: '', email: '', subject: '', message: '' });
+
+    const handleChange = (e) => {
+        setFormState({ ...formState, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ 'form-name': 'contact', ...formState }).toString(),
+            });
+            setFormState({ name: '', email: '', subject: '', message: '' });
+        } catch (error) {
+            console.error('Form submission error:', error);
+        }
+    };
+
     return (
         <section id="contact" className="py-20 lg:py-32">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,16 +53,6 @@ const Contact = () => {
 
                             <div className="flex items-center space-x-4 group">
                                 <div className="p-3 rounded-lg bg-white/5 border border-white/5 group-hover:bg-purple-500/10 group-hover:border-purple-500/30 transition-all">
-                                    <Phone className="text-blue-400" size={20} />
-                                </div>
-                                <div>
-                                    <p className="text-sm text-gray-500">Call Me At</p>
-                                    <p className="text-white font-medium">+91 7219480670</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center space-x-4 group">
-                                <div className="p-3 rounded-lg bg-white/5 border border-white/5 group-hover:bg-purple-500/10 group-hover:border-purple-500/30 transition-all">
                                     <MessageSquare className="text-pink-400" size={20} />
                                 </div>
                                 <div>
@@ -60,12 +70,15 @@ const Contact = () => {
                         transition={{ duration: 0.6 }}
                         className="glass p-8 rounded-3xl border border-white/5"
                     >
-                        <form className="space-y-6">
+                        <form name='contact' onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
                                     <input
                                         type="text"
+                                        name="name"
+                                        value={formState.name}
+                                        onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-500 focus:outline-none transition-colors"
                                         placeholder="John Doe"
                                     />
@@ -74,6 +87,9 @@ const Contact = () => {
                                     <label className="block text-sm font-medium text-gray-400 mb-2">Your Email</label>
                                     <input
                                         type="email"
+                                        name="email"
+                                        value={formState.email}
+                                        onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-500 focus:outline-none transition-colors"
                                         placeholder="john@example.com"
                                     />
@@ -83,6 +99,9 @@ const Contact = () => {
                                 <label className="block text-sm font-medium text-gray-400 mb-2">Subject</label>
                                 <input
                                     type="text"
+                                    name="subject"
+                                    value={formState.subject}
+                                    onChange={handleChange}
                                     className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-500 focus:outline-none transition-colors"
                                     placeholder="Project Inquiry"
                                 />
@@ -90,6 +109,9 @@ const Contact = () => {
                             <div>
                                 <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
                                 <textarea
+                                    name="message"
+                                    value={formState.message}
+                                    onChange={handleChange}
                                     rows="4"
                                     className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-500 focus:outline-none transition-colors resize-none"
                                     placeholder="Tell me about your project..."

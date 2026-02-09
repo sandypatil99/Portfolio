@@ -12,12 +12,12 @@ import {
 } from 'lucide-react';
 
 const skills = [
-    { icon: <Layout className="text-blue-400" />, name: 'Frontend Dev', items: ['React', 'Next.js', 'Vue'] },
+    { icon: <Layout className="text-blue-400" />, name: 'Frontend Dev', items: ['React', 'WordPress' ,'Next.js'] },
     { icon: <Code2 className="text-purple-400" />, name: 'Languages', items: ['TypeScript', 'JavaScript', 'Python'] },
-    { icon: <Database className="text-green-400" />, name: 'Backend', items: ['Node.js', 'PostgreSQL', 'Prisma'] },
+    { icon: <Database className="text-green-400" />, name: 'Backend', items: ['Node.js', 'PostgreSQL', 'PHP'] },
     { icon: <Layers className="text-pink-400" />, name: 'Styling', items: ['Tailwind CSS', 'Framer Motion', 'SASS'] },
     { icon: <Figma className="text-orange-400" />, name: 'Design', items: ['Figma', 'UI/UX Design', 'Design Systems'] },
-    { icon: <Terminal className="text-yellow-400" />, name: 'Tools', items: ['Git', 'Docker', 'Vite'] },
+    { icon: <Terminal className="text-yellow-400" />, name: 'Tools', items: ['Git', 'Docker', 'Gen AI'] },
 ];
 
 const Skills = () => {

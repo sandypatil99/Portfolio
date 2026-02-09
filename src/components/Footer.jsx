@@ -9,18 +9,18 @@ const Footer = () => {
                     <div className="mb-6 md:mb-0">
                         <span className="text-2xl font-bold gradient-text">SP</span>
                         <p className="mt-2 text-gray-500 text-sm">
-                            © {new Date().getFullYear()} Sandesh Patil. All rights reserved.
+                            © 2022 - {new Date().getFullYear()} Sandesh Patil. All rights reserved.
                         </p>
                     </div>
 
                     <div className="flex space-x-6">
-                        <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://github.com/sandypatil99" className="text-gray-400 hover:text-white transition-colors">
                             <Github size={20} />
                         </a>
-                        <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                        <a href="www.linkedin.com/in/sandeshjspatil" className="text-gray-400 hover:text-white transition-colors">
                             <Linkedin size={20} />
                         </a>
-                        <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://x.com/Sandeshpatil_in" className="text-gray-400 hover:text-white transition-colors">
                             <Twitter size={20} />
                         </a>
                         <a href="#" className="text-gray-400 hover:text-white transition-colors">

@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, BookOpen, Coffee, Zap } from 'lucide-react';
+import { Award, BookOpen, Code, Zap } from 'lucide-react';
 import profilePic from '../assets/Myself.jpeg';
 
 const About = () => {
     const stats = [
-        { label: 'Years Experience', value: '5+', icon: <Zap size={20} className="text-yellow-400" /> },
-        { label: 'Projects Completed', value: '40+', icon: <Award size={20} className="text-purple-400" /> },
-        { label: 'Cups of Coffee', value: '1.2k', icon: <Coffee size={20} className="text-blue-400" /> },
+        { label: 'Years Experience', value: '2+', icon: <Zap size={20} className="text-yellow-400" /> },
+        { label: 'Projects Completed', value: '15+', icon: <Award size={20} className="text-purple-400" /> },
+        { label: 'Line of Code', value: '10k', icon: <Code size={20} className="text-blue-400" /> },
         { label: 'Ongoing Learning', value: 'Always', icon: <BookOpen size={20} className="text-green-400" /> },
     ];
 

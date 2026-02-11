@@ -5,19 +5,17 @@ import {
     Database,
     Globe,
     Layout,
-    Cpu,
-    Figma,
     Terminal,
-    Layers
+    Cpu
 } from 'lucide-react';
 
 const skills = [
-    { icon: <Layout className="text-blue-400" />, name: 'Frontend Dev', items: ['React', 'WordPress' ,'Next.js'] },
-    { icon: <Code2 className="text-purple-400" />, name: 'Languages', items: ['TypeScript', 'JavaScript', 'Python'] },
-    { icon: <Database className="text-green-400" />, name: 'Backend', items: ['Node.js', 'PostgreSQL', 'PHP'] },
-    { icon: <Layers className="text-pink-400" />, name: 'Styling', items: ['Tailwind CSS', 'Framer Motion', 'SASS'] },
-    { icon: <Figma className="text-orange-400" />, name: 'Design', items: ['Figma', 'UI/UX Design', 'Design Systems'] },
-    { icon: <Terminal className="text-yellow-400" />, name: 'Tools', items: ['Git', 'Docker', 'Gen AI'] },
+    { icon: <Layout className="text-blue-400" />, name: 'Frontend', items: ['HTML5','CSS3', 'BootStrap', 'Tailwind CSS','React' , 'Next.js'] },
+    { icon: <Code2 className="text-purple-400" />, name: 'Languages', items: ['JavaScript', 'Python', 'OOP'] },
+    { icon: <Database className="text-green-400" />, name: 'Backend & Database', items: ['Node.js', 'PHP', 'Rest API', 'MYSQL', 'MongoDB'] },
+    { icon: <Globe className="text-cyan-400" />, name: 'WordPress', items: ['Themes & Plugins Development', 'WooCommerce' , 'Elementor', 'Gutenberg'] },
+    { icon: <Cpu className="text-yellow-400" />, name: 'AI Kit', items: ['Gen AI','OpenAI', 'Copilot', 'AI Agent'] },
+    { icon: <Terminal className="text-yellow-400" />, name: 'Tools', items: ['Git','Postman','Figma', 'VS Code','cPanel','AWS'] },
 ];
 
 const Skills = () => {

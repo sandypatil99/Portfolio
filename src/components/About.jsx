@@ -5,9 +5,9 @@ import profilePic from '../assets/Myself.jpeg';
 
 const About = () => {
     const stats = [
-        { label: 'Years Experience', value: '2+', icon: <Zap size={20} className="text-yellow-400" /> },
-        { label: 'Projects Completed', value: '15+', icon: <Award size={20} className="text-purple-400" /> },
-        { label: 'Line of Code', value: '10k', icon: <Code size={20} className="text-blue-400" /> },
+        { label: 'Years Experience', value: '1+', icon: <Zap size={20} className="text-yellow-400" /> },
+        { label: 'Projects Completed', value: '10+', icon: <Award size={20} className="text-purple-400" /> },
+        { label: 'Line of Code', value: '5k', icon: <Code size={20} className="text-blue-400" /> },
         { label: 'Ongoing Learning', value: 'Always', icon: <BookOpen size={20} className="text-green-400" /> },
     ];
 
@@ -28,7 +28,7 @@ const About = () => {
                         <div className="space-y-4 text-gray-400 leading-relaxed">
                             <p>
                                 I'm a frontend developer with a deep passion for UI/UX design and building seamless user experiences.
-                                With over five years in the field, I've had the opportunity to work with diverse teams and technologies.
+                                With over a year in the field, I've had the opportunity to work with diverse teams and technologies. Like react and wordpress.
                             </p>
                             <p>
                                 My approach combines technical proficiency with a creative mindset, allowing me to build applications

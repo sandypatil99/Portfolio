@@ -21,7 +21,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-8">
+                        <div className="ml-10 flex  items-baseline space-y-2">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.name}

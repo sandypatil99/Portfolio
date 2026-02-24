@@ -862,6 +862,12 @@ main {
   font-weight: var(--fw-300);
 }
 
+.skill p{
+  color: var(--vegas-gold);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+}
+
 .skill-progress-bg {
   background: var(--jet);
   width: 100%;
@@ -1240,14 +1246,24 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 450px screen
  */
 
-@media (min-width: 450px) {
+@media (min-width: 250px) {
 
   /**
    * client
    */
 
+
   .clients-item { min-width: calc(33.33% - 10px); }
 
+
+
+  /* sidebar */
+  .sidebar { max-height: 130px; }
+
+  .sidebar-info { padding-bottom: 0px; }
+
+
+  .avatar-box img { width: 80px; }
 
 
   /**
@@ -1346,7 +1362,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box { border-radius: 30px; }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img { width: 100px; }
 
   .info-content .name { margin-bottom: 15px; }
 
